@@ -131,8 +131,6 @@
 
 <!-- JS -->
 {!! HTML::script('js/lightslider.js') !!}
-
-{!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/bootstrap.min.js') !!}
 {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/password_strength/strength.js') !!}
 {!! HTML::script('http://morganthall.com/ujo/chosen-koenpunt/chosen.jquery.min.js') !!}
 
