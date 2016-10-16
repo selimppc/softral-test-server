@@ -1,0 +1,32 @@
+
+ul#parents li {
+    /* background: #e8f5fb none repeat scroll 0 0;
+    color: #778899;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    
+    margin: 0 10px 10px 0;*/
+	height: 40px;
+    width: 170px;
+	background:none;	
+}
+.nopadding{
+	margin:0px !important;
+	padding:0px !important;
+}
+#sendie{
+	padding:0px;
+	border-radius:5px;
+	height:47px;
+}
+ul.ph-area li{
+	float:left !important;
+}
+.tablist.cont_bar {
+	width:100% !important;
+}
+ul
+{
+    list-style-type: none;
+}

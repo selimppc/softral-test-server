@@ -1,0 +1,48 @@
+[02-Oct-2016 05:08:07 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 05:08:17 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 05:11:12 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 14:03:59 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 14:05:06 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 14:05:38 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 14:09:54 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44
+[02-Oct-2016 14:10:49 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/softral_old_backup/public/techmart/config.php on line 44

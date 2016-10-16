@@ -1,0 +1,206 @@
+
+.accent-color{
+	color: #C0392B !important;
+}
+
+.accent-bgcolor{
+	background-color: #C0392B !important;
+}
+
+.accent-bordercolor{
+	border-color: #C0392B !important;
+}
+
+body{
+	color: #404040;
+	font-family: Merriweather;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+        background-color: #F9FAFC;/*background-color: #141719;*/
+}
+
+#wrap{
+/*	background-color: #ffffff;
+	background-image: url(http://demo.themesholic.com/byron/wp-content/uploads/2014/07/pw_maze_white.png);*/
+		
+}
+
+a{
+	color: #0ea592;
+}
+
+a:hover{
+	color: #404040;
+}
+
+::selection{
+	color: #fff;
+	background: #C0392B;
+}
+::-moz-selection{
+	color: #fff;
+	background: #0ea592;
+}
+
+h1{
+	color: #393939;
+	font-family: Open Sans;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 42px;
+		
+}
+
+h2{
+	color: #fff;
+	font-family: Open Sans;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 36px;
+		
+}
+
+h3{
+	color: #fff;
+	font-family: Open Sans;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+		
+}
+
+h4{
+	color: #393939;
+	font-family: Open Sans;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+		
+}
+
+h5{
+	color: #393939;
+	font-family: Open Sans;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 20px;
+		
+}
+
+h6{
+	color: #393939;
+	font-family: Open Sans;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+		
+}
+
+#header-menu ul.menu li,
+#header-menu ul.menu li a{
+	color: #ffffff;
+	font-family: Open Sans;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+#page-header h2{
+	color: #ffffff;
+	font-family: Open Sans;
+	font-size: 45px;
+	font-weight: lighter;
+	line-height: 56px;
+	text-transform:uppercase;
+}
+
+
+#page-header h3{
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size:15px;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+footer,
+footer .chosen-results li{
+	background: #2b2b2b;
+}
+footer{
+	    float: left;
+    width: 100%;
+}
+#copyright{
+	background: #272727;
+	text-align:center;
+	font-family: 'Open Sans', sans-serif;
+	    width: 100%;
+    float: left;
+
+}
+
+
+input[type="submit"],
+button,
+a.button,
+#page-header h2 span,
+#page-header h3 span,
+#header-menu ul.menu li:hover > a,
+#header-menu ul.menu li a:hover,
+#header-menu ul.menu > li.current_page_item > a,
+#header-menu-mobile .menu-item-has-children > a.open{
+	color: #fcb415;
+	/*border-bottom:1px solid #fcb415;*/
+}
+
+input[type="submit"]:hover,
+button:hover,
+a.button:hover,
+.md-blog .read-more a:hover,
+input[type="submit"].color,
+.md-blog .post .post-format:before,
+button.color,
+a.button.color,
+.md-pagination li.active,
+.md-pagination li:hover,
+.md-pagination.pagination-page span,
+.md-pagination.pagination-page a span:hover,
+.widget .tagcloud a:hover,
+.form-submit input,
+.mejs-overlay:hover .mejs-overlay-button,
+.mejs-controls .mejs-time-rail .mejs-time-current,
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
+	    background-color: #333;
+    color: #fff;
+}
+
+.widget .tagcloud a:hover,
+.widget_md_widget_dribbble ul li:hover,
+.widget_md_widget_pinterest ul li:hover,
+.widget_md_widget_flickr .flickr_badge_image:hover,
+.form-submit input,
+.md-blog .post.sticky{
+	border-color: #fcb415 !important;
+}
+
+input[type="submit"]:hover,
+button:hover,
+a.button:hover,
+.md-blog .read-more a:hover,
+input[type="submit"].color,
+button.color,
+a.button.color{
+	border-color: #fcb415;
+	
+}
+
+
+.md-blog .post-title a,
+.md-social-share .item a{
+	color: #404040 !important;
+}
+?>
+/* CUSTOM CSS STARTS HERE */
+                                            

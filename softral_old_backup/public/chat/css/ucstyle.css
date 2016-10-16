@@ -1,0 +1,184 @@
+body{
+	padding:0px;
+	margin:0px;
+	font-family:roboto;
+	font-size:14px;
+}
+ul, li, ol, a, span, strong, img, h1, h2, h3, h4, h5, h6, p{
+	padding:0px;
+	margin:0px;
+	text-decoration:none;
+	color:#282828;
+}
+header {
+    background: none repeat scroll 0 0 #cb5b00;
+    border-bottom: 5px solid #0051cb;
+    padding: 5px 0;
+}
+.support {
+    color: #fff;
+}
+.UChead span {
+    color: #fff;
+    float: left;
+    margin-right: 10px;
+}
+.support {
+    padding-top: 9px;
+}
+.UCLoginForm {
+    margin-bottom: 80px;
+    margin-top: 80px;
+    text-align: center;
+}
+.form-group {
+    float: left;
+    width: 100%;
+	text-align:left;
+}
+.UCLoginForm h1 {
+    color: #cb5b00;
+    font-family: raleway;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+.form-group p a {
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 100%;
+	color: #cb5b00;
+}
+.bttn {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+.UCfooter {
+    background: none repeat scroll 0 0 #cb5b00;
+    border-top: 5px solid #0051cb;
+    padding: 5px 0;
+	text-align:center;
+	position:fixed;
+	bottom:0px;
+	width:100%;
+}
+.UCfooter p {
+    color: #fff;
+}
+button.btn.btn-warning{
+	background: none repeat scroll 0 0 #cb5b00;
+	border-color: none repeat scroll 0 0 #cb5b00;
+}
+.Admin {
+    font-family: raleway;
+    font-size: 30px;
+}
+.UCtabing ul {
+    background: none repeat scroll 0 0 #cb5b00;
+    margin-top: 25px;
+    float:left;
+	width:100%;
+	margin-bottom: 25px;
+}
+.UCtabing a {
+    color: #fff;
+}
+.UCtabing li {
+    display: inline;
+    float: left;
+    list-style: outside none none;
+    padding: 10px 0;
+    text-align: center;
+    width: 20%;
+}
+.UCtabing .active {
+    background: none repeat scroll 0 0 #0077bb;
+}
+.FacebookForm input, .FacebookForm select {
+    border-radius: 0;
+    height: 35px;
+    margin-top: 10px;
+}
+.GmailForm input ,.GmailForm select {
+    border-radius: 0;
+    height: 35px;
+    margin-top: 10px;
+}
+.FacebookForm h1 {
+    color: #cb5b00;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 20px 0 10px 15px;
+}
+.GmailForm h1 {
+    color: #cb5b00;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 20px 0 10px 15px;
+}
+.UCLogout a {
+    color: #fff;
+    text-decoration: none;
+}
+.UCLogout li {
+    color: #fff;
+    display: inline;
+    list-style: outside none none;
+    padding: 0 5px;
+}
+.UCLogout ul {
+    padding-top: 12px;
+    text-align: right;
+}
+.USCommentSection {
+    border: 2px solid #0077aa;
+    max-height: 395px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 3px 15px;
+	height:100%;
+}
+.USCommentSection1 {
+    border: 2px solid #0077aa;
+    max-height: 395px;
+    padding: 0px 13px;
+	height:100%;
+}
+.UCChooseIMG2 img {
+    background: #ccc none repeat scroll 0 0;
+}
+.UCChooseIMG2 {
+    border: 1px solid #ccc;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 20px 0;
+    text-align: center;
+    width: 45%;
+}
+.UCChooseIMG3 {
+    border: 1px solid #ccc;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 20px 0;
+    text-align: center;
+    width: 45%;
+}
+.UCChooseIMG1 {
+    text-align:center;
+	margin-top:29px;
+	
+}
+.UCChoose p {
+    padding-top: 6px;
+}
+.UCMainColor {
+    margin-bottom: 50px;
+}
+.UCChooseIMG2 h1 {
+    color: #800000;
+    font-size: 60px;
+    padding: 40px 0;
+}

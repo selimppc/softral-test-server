@@ -1,0 +1,150 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the controller to call when that URI is requested.
+|
+*/
+
+Route::get('/', [
+				'as'   => 'welcome',
+				'uses' => 'WelcomeController@Index'
+		]);
+		
+Route::get('/shome', [
+				'as'   => 'welcome.home',
+				'uses' => 'WelcomeController@home'
+		]);
+		
+Route::Post('/editable', [
+				 "before" => "csrf",
+				'as'   => 'editable',
+				'uses' => 'WelcomeController@editable'
+		]);	
+		
+Route::get('/errors', [
+				'as'   => 'errors',
+				'uses' => 'WelcomeController@errors'
+		]);
+		
+		
+Route::get('/pages/{slug}', [
+				'as'   => 'pages.slug',
+				'uses' => 'WelcomeController@GetPages'
+		]);
+		
+Route::get('/contact', [
+				'as'   => 'contact',
+				'uses' => 'WelcomeController@ContactUs'
+		]);
+		
+Route::post('/contact/send_email', [
+				"before" => "csrf",
+				'as'   => 'contact.sendEmail',
+				'uses' => 'WelcomeController@sendEmail'
+		]);
+Route::get('/get_freelancers', ['as' => 'home.gf', 'uses' => 'WelcomeController@get_freelancers']);
+
+Route::post('/job/ajaxproposal/{id}/{page}', [
+				'as'   => 'job.ajaxproposal',
+				'uses' => 'JobController@ajaxProposal'
+		]);
+		
+Route::post('/job/savejob/{id}/{user_type}', [
+				'as'   => 'job.savejob',
+				'uses' => 'JobController@savejob'
+		]);
+		
+Route::post('/ad/savemessage/', [
+				'as'   => 'ad.savemessage',
+				'uses' => 'AdController@savemessage'
+		]);
+
+Route::get('home', 'HomeController@index');
+
+Route::get('download/{download?}', 'JobController@getDownload');
+
+		
+Route::get('ad-lists', [
+				'as'   => 'job.listAd',
+				'uses' => 'AdController@listAd',
+				
+		]);	
+		
+Route::get('ad-detail/{ad}', [
+				'as'   => 'ad.addetail',
+				'uses' => 'AdController@Addetail',
+				
+		]);
+		
+Route::get('ad-category/{category?}', ['before' => 'shiftParameter:category','uses' => 'AdController@listAd'])
+    ->where('category', '(.*)');
+	
+Route::get('state/{state?}', ['before' => 'shiftParameter:state','as'=>'ad.searchBystate','uses' => 'AdController@listAd'])
+    ->where('state', '(.*)');
+		
+Route::get('city/{city?}', ['before' => 'shiftParameter:city','as'=>'ad.searchBycity','uses' => 'AdController@listAd'])
+    ->where('city', '(.*)');
+	
+Route::get('country/{country?}', ['before' => 'shiftParameter:country','as'=>'ad.searchBycity','uses' => 'AdController@listAd'])
+    ->where('country', '(.*)');
+
+Route::get('category/{category?}', ['before' => 'shiftParameter:category', 'uses' => 'WelcomeController@home'])
+    ->where('category', '(.*)');
+	
+Route::get('skill/{skill?}', ['before' => 'shiftParameter:skill', 'uses' => 'WelcomeController@home'])
+    ->where('skill', '(.*)');
+	
+	Route::filter('shiftParameter', function ($route, $request, $value) {
+    // save off the current route parameters    
+    $parameters = $route->parameters();
+    // unset the current route parameters
+    foreach($parameters as $name => $parameter) {
+        $route->forgetParameter($name);
+    }
+
+    // union the new parameters and the old parameters
+    $parameters = ['customParameter0' => $value] + $parameters;
+    // loop through the new set of parameters to add them to the route
+    foreach($parameters as $name => $parameter) {
+        $route->setParameter($name, $parameter);
+    }
+});
+
+
+Route::group(['before' => ['logged']], function ()
+{
+Route::get('add-job', [
+				'as'   => 'job.addJob',
+				'uses' => 'JobController@addJob',
+				
+		]);
+		
+Route::get('all-members', [
+				'as'   => 'user.members',
+				'uses' => 'WelcomeController@members',
+				
+		]);
+		
+Route::get('/user_Agreement', [
+				'as'   => 'welcome.user_Agreement',
+				'uses' => 'WelcomeController@user_Agreement'
+		]);
+		
+Route::get('job/notification',[
+			'as' => 'job.viewNotification',
+			'uses' => 'WelcomeController@viewNotification',
+]);
+
+Route::get('notification/method',[
+            'as'   => 'welcome.notification',
+            'uses' => 'WelcomeController@hidenotification',
+    ]);
+		
+Route::get('add-ad', [
+				'as'   => 'j

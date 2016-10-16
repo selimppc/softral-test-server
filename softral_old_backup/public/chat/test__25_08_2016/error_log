@@ -1,0 +1,96 @@
+[12-Jul-2016 02:32:05 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[12-Jul-2016 02:32:11 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[12-Jul-2016 02:32:22 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[12-Jul-2016 02:32:33 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[12-Jul-2016 02:32:56 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[13-Jul-2016 06:18:35 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:18:35 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:18:35 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:18:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:18:44 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:18:44 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:18:44 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:18:44 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:18:49 UTC] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:18:49 UTC] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:18:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 55
+[13-Jul-2016 06:18:52 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:18:52 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:18:52 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:18:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:01 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:01 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:01 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:01 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:10 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:10 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:10 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:10 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:19 UTC] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:19:19 UTC] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:19:19 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 55
+[13-Jul-2016 06:19:19 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:19 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:19 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:19 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:29 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:29 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:29 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:29 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:37 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:37 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:37 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:38 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:46 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:46 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:46 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:19:49 UTC] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:19:49 UTC] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:19:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 55
+[13-Jul-2016 06:19:56 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:56 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:19:56 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:19:56 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:20:04 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:04 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:04 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:20:04 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:20:14 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:14 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:14 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:20:14 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:20:19 UTC] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:20:19 UTC] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 2
+[13-Jul-2016 06:20:19 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 55
+[13-Jul-2016 06:20:22 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:22 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:22 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:20:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[13-Jul-2016 06:20:23 UTC] PHP Warning:  include_once(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/index.php on line 7
+[13-Jul-2016 06:20:23 UTC] PHP Warning:  include_once(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/index.php on line 7
+[13-Jul-2016 06:20:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/pronoor/public_html/softral/public/chat/test/index.php:7) in /home/pronoor/public_html/softral/public/chat/test/index.php on line 12
+[13-Jul-2016 06:20:37 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:37 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[13-Jul-2016 06:20:37 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[13-Jul-2016 06:20:37 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20

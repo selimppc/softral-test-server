@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+body{max-width:;}
+.dashbord-main-div{width:100%; max-width:; margin:0 auto; position:relative;}/*border:2px solid #666666; border-top-left-radius:4px; border-top-right-radius:4px; border-top-right-radius: 4px;*/
+#ul-dashboard{ width:100%; background-color:#bf4027; height:29px; position:fixed; z-index: 10;}	
+#ul-dashboard ul{ position:relative; display: inline-table; width:100%;}
+#ul-dashboard ul li{ display: block; float: left; line-height:1.8; }
+#ul-dashboard ul li:hover {background-color:transparent; color:#000000;}
+#ul-dashboard ul li a{ padding: 8px 10px 6px; font-size:14px; color:#ffffff; border-radius:2px; }
+#ul-dashboard ul li a:hover{background-color:#ffffff; color:#000000; cursor:pointer;}/*#316ac5 #ffffff*/
+#ul-dashboard ul li ul{ display:none; position:absolute; width:16%; padding:0 1%; text-align:left; background-color:#ffffff;  box-shadow:1px 1px 1px #c2bfb4; border-radius:4px; z-index: 9999;}
+#ul-dashboard ul li:hover ul{ display:block; background-color:#ffffff; border:1px solid #c2bfb4; box-shadow:1px 1px 1px #525252;}
+#ul-dashboard ul li ul li{ float:none; position:relative; padding: 0px; background-color:#ffffff;}
+.border-bottom{ border-bottom:1px solid #b4b4b4;}
+#ul-dashboard ul li ul li:hover{ color:#000000; background-color:#f5f5f5;}/*0066ff*/
+#ul-dashboard ul li ul li:hover a{ color:#000000;}
+#ul-dashboard ul li ul li a{ color:#000000;}
+#ul-dashboard ul li ul li a:hover{background-color:transparent; cursor:pointer;}
+
+
+.column1{
+	background-color:#f4f4f4;
+    float: left;
+    padding:1% 1% 0;
+    text-align: center;
+    /*width: 17%;*/
+	width:19%;
+	/*position:absolute;*/
+	margin-top: 29px;
+	height:100%;	
+}
+.column2{
+	background-color:#ffffff;/*#FF9*/
+    float: left;
+    /*padding: 0 1%;*/
+	/*margin: 0 1%;*/
+    text-align: center;
+	/*width: 58%;*/
+	width:60% !important;
+	
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	/*float:right;*/
+	margin-top: 29px;
+	padding: 0 0.4%;
+}
+.column3{
+	background-color: transparent;
+    float:left;
+    padding:0 2px;/*padding: 0 1%*/
+    margin-top: 29px;
+	text-align: center;
+    width: 18%;/*17*/
+	padding: 94px 0;
+	
+}
+
+.clear{ clear:both;}
+.col-row{ padding: 3% 0;}
+.dashboard-column1-list{}
+.dashboard-column1-list > ul {
+    text-align: left;
+}
+.dashboard-column1-list ul li{ padding: 3% 0;}
+.dashboard-column1-list ul li a{ color:inherit; font-size: 15px;}
+/*.dashboard-column1-list ul li:hover{ background-color:#ccffcc;}*/
+.column1-list2{}
+.column1-list2 ul{
+	display: block;
+	text-align: left;
+	padding: 3% 0;
+}
+.column1-list2 ul li{
+    display: inline;
+	margin: 0 10% 0 0;
+}
+/*.column1-list2 ul li a,
+.column1-list2 span a{ color:inherit;}*/
+
+.column1-list2 ul li a, .column1-list2 span a {
+    color: inherit;
+    font-size: 15px;
+    padding: 0;
+}
+.column1-list2 span{ float:right;}
+
+.column1-list4 { text-align:left;}
+.column1-list4 ul{ display:block; float:left; width:100%;}
+.column1-list4 ul li{ float:left; text-align:left; width:100%;}
+.listing ul li{ width:auto;}
+.col1-pad1{
+    margin:1px 0 0 2%; 
+          padding: 0% 7% 4%;
+}
+.column1-profile-name{
+    /*padding: 2% 37% 2% 9%;*/ 
+                      margin-top: 4px; margin-left:2%;
+}
+.column1-profile-name.col1-pad1:hover {
+    background: #bfbfbf none repeat scroll 0 0;
+    border-radius: 13px;
+}
+.col1-pad1 > a {
+    color: inherit;
+    font-size: 14px;
+}
+
+
+.column1-list5 { text-align:left;}
+.column1-list5 ul{ display:block; float:left; width: 82%;}
+.column1-list5 ul li{ float:left;}
+.col1-pad2{margin-top: 1px; padding: 15px 3%;}/*padding: 5% 28%*/
+.col1-pad2 a {
+    color: #000000;
+    font-size: 22px;/*14px*/
+}
+.col2-icons{ float:right; padding: 1% 0; width: 18%;}
+.col2-icons span{}
+
+
+/*#column1-list3{text-align:left;}
+#column1-list3 ul{ display:block;}
+#column1-list3 ul li{float: left;} 
+.col1-pad {padding: 5% 15%;}
+.col1-pad > a {
+    color: inherit;
+    font-size: 14px;
+}*/
+
+.column1 img {
+    border: 0 none !important;
+	border-radius:0px;
+}
+.column1 a {
+    padding: 0;
+	font-size: 16px;
+}
+
+.tablist.cont_bar {
+    background-color:#f4f4f4;
+    height: 360px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 104%;
+}
+.advertisement{
+	border:1px solid #b4b4b4;
+	width: 96%;
+    margin: 0 2%;
+	 height:400px;
+}
+
+.advertisement  > img {
+    border: medium none;
+    border-radius: 0;
+}

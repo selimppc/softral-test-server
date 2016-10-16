@@ -1,0 +1,39 @@
+/*********************************************/
+/*											 */
+/* BACKUP THIS FILE BEFORE UPDATE YOUR THEME */
+/*											 */
+/*********************************************/
+
+.postPhotos {
+    background: url(http://www.netnoor.com/images/fb-icon.png) no-repeat -12px -13px;
+    width: 17px;
+    height: 15px;
+    position: absolute;
+    vertical-align: middle;
+        top: 32%;
+    right: 10px;
+    cursor: pointer !important;
+}
+.input-group-addon{background-color:transparent;}
+.emo-bg{ background: transparent !important; border: none !important;    padding: 0;
+    margin: 0;
+    margin-right: 30px;
+}
+.emoji-wysiwyg-editor{    border-right: 0 !important;
+    box-shadow: none !important;
+    padding-right: 30px !important;
+}
+.postcomment1 .file-upload input.upload {
+        position: absolute;
+    top: 11px;
+    right: 5px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    opacity: 0;
+    cursor: pointer;
+    width: 25px;
+}
+.pre-image{ width: 100%; float: left;    margin: 20px 0px;}
+.comment-block img{ border: 1px solid #eee;}
+.edit-post-buttn{ margin: 10px 0px;}

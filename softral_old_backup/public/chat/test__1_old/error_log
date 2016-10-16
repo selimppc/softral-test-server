@@ -1,0 +1,71 @@
+[25-Jun-2016 07:20:13 UTC] PHP Warning:  require(/home/pronoor/public_html/softral/public/chat/test/../../bootstrap/autoload.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat.php on line 8
+[25-Jun-2016 07:20:13 UTC] PHP Fatal error:  require(): Failed opening required '/home/pronoor/public_html/softral/public/chat/test/../../bootstrap/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat.php on line 8
+[25-Jun-2016 13:17:40 UTC] PHP Warning:  require(/home/pronoor/public_html/softral/public/chat/test/../../bootstrap/autoload.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/index.php on line 5
+[25-Jun-2016 13:17:40 UTC] PHP Fatal error:  require(): Failed opening required '/home/pronoor/public_html/softral/public/chat/test/../../bootstrap/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/index.php on line 5
+[03-Jul-2016 06:40:31 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:40:31 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:40:31 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:40:36 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[03-Jul-2016 06:40:36 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 3
+[03-Jul-2016 06:40:36 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 19
+[03-Jul-2016 06:40:36 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:40:36 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:40:36 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:40:42 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:40:42 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:40:42 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:40:46 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:40:46 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:40:46 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:40:51 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:40:51 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:40:51 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:40:56 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:40:56 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:40:56 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:41:01 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:41:01 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:41:01 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:41:06 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:41:06 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:41:06 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:41:11 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 06:41:11 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 2
+[03-Jul-2016 01:41:11 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 46
+[03-Jul-2016 06:41:12 UTC] PHP Warning:  DateTime::setTimezone() expects parameter 1 to be DateTimeZone, null given in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 14
+[03-Jul-2016 06:41:12 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/pronoor/public_html/softral/public/chat/test/chat-change-user-online-status.php on line 20
+[04-Jul-2016 04:56:36 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[04-Jul-2016 04:56:41 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[04-Jul-2016 04:56:46 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[04-Jul-2016 04:56:51 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[04-Jul-2016 04:56:56 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[04-Jul-2016 04:57:01 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[04-Jul-2016 04:57:06 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73

@@ -1,0 +1,184 @@
+[27-Aug-2016 09:05:33 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 09:05:40 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 09:05:44 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 09:05:45 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 09:05:48 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 09:06:04 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 10:50:14 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[27-Aug-2016 21:33:15 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[29-Aug-2016 23:58:59 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[30-Aug-2016 07:14:28 America/Chicago] PHP Warning:  include(chat-chatbox.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-container.php on line 135
+[30-Aug-2016 07:14:28 America/Chicago] PHP Warning:  include(): Failed opening 'chat-chatbox.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pronoor/public_html/softral/public/chat/test/chat-container.php on line 135
+[30-Aug-2016 13:32:18 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:73
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(73): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 73
+[30-Aug-2016 23:03:17 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:76
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(76): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 76
+[31-Aug-2016 06:21:20 UTC] PHP Warning:  Unterminated comment starting line 83 in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 83
+[31-Aug-2016 06:21:20 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 85
+[31-Aug-2016 08:35:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 165
+[31-Aug-2016 08:35:36 UTC] PHP Warning:  Unterminated comment starting line 234 in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 234
+[31-Aug-2016 08:35:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 235
+[13-Sep-2016 01:56:04 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:04 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:17 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:17 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:21 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:21 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:34 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:56:34 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:57:27 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:57:27 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:57:54 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 01:57:54 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:04 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:04 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:29 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:29 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:35 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:35 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:47 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:01:47 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:02:04 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:02:04 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:02:19 America/Chicago] PHP Warning:  include_once(conatct-user.php): failed to open stream: No such file or directory in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 02:02:19 America/Chicago] PHP Warning:  include_once(): Failed opening 'conatct-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/pronoor/public_html/softral/public/chat/test/chat-users.php on line 48
+[13-Sep-2016 04:51:56 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/pronoor/public_html/softral/public/chat/test/contact-user.php on line 30
+[19-Sep-2016 03:26:47 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:29:12 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:29:14 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:37:14 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:37:15 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:37:15 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:38:38 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php:123
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php(123): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-msgs.php on line 123
+[19-Sep-2016 03:38:40 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:40:32 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:40:32 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:40:33 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:58:25 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:58:26 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 03:58:26 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 04:00:49 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 04:00:50 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[19-Sep-2016 04:00:52 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTimeZone::__construct(): Unknown or bad timezone ()' in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php:80
+Stack trace:
+#0 /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php(80): DateTimeZone->__construct('')
+#1 {main}
+  thrown in /home/pronoor/public_html/softral/public/chat/test/chat-new-msgs.php on line 80
+[28-Sep-2016 12:14:45 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/public/chat/test/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/public/chat/test/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/public/chat/test/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/public/chat/test/config.php on line 44
+[28-Sep-2016 12:15:08 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/pronoor/public_html/softral_test/public/chat/test/config.php:44
+Stack trace:
+#0 /home/pronoor/public_html/softral_test/public/chat/test/config.php(44): PDO->__construct('mysql:dbname=so...', 'root', 'root')
+#1 /home/pronoor/public_html/softral_test/public/chat/test/login.php(2): include('/home/pronoor/p...')
+#2 {main}
+  thrown in /home/pronoor/public_html/softral_test/public/chat/test/config.php on line 44
