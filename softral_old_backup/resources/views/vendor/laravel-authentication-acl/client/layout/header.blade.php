@@ -6,7 +6,7 @@
                     <div class="h_left">
                         <!--<div class="logo text-center">Softral<sub>TM</sub></div>-->
                         <div class="logo text-center">
-                            <a href="index.php"><img src="{{asset('assets/images/logo-1.png')}}" class="img-responsive"></a>
+                            <a href="{{ URL::to('/')}}"><img src="{{asset('assets/images/logo-1.png')}}" class="img-responsive"></a>
                         </div>
                     </div>
                 </div>
