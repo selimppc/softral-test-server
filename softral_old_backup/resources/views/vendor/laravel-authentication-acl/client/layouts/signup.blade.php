@@ -68,12 +68,12 @@
 				  
                  <div class="row">
 				   <div class="col-xs-6 col-md-6 ">
-                     {!! Form::select('country', $countries,'United States',['class' => 'form-control','id'=>'country','required']) !!}
+                     {!! Form::select('country', isset($countries)?$countries:array() ,'United States',['class' => 'form-control','id'=>'country','required']) !!}
 					</div> 
 				 
 				
 				   <div class="col-xs-2 col-md-2 ">
-				     {!! Form::select('country_code', $countries1,'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+				     {!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
 					 <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
                     </div>
 					

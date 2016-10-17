@@ -54,7 +54,7 @@ Softral - User SignUp
 				   <div class="form-group">
 				   <div class="row">
 				   <div class="col-xs-6 col-md-6">
-                     {!! Form::select('country', $countries,null,['class' => 'form-control','id'=>'country','required']) !!}
+                     {!! Form::select('country', isset($countries)?$countries:array() ,null,['class' => 'form-control','id'=>'country','required']) !!}
 					</div> 
 					<div class="col-xs-6 col-md-6">
                      What you want to do? {!! Form::radio('custom_profile_1', 'Seller', true) !!} <strong>Sell</strong> {!! Form::radio('custom_profile_1', 'Buyer') !!} <strong>Buy</strong> {!! Form::radio('custom_profile_1', 'Both') !!} <strong>Both</strong>
