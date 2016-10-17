@@ -156,7 +156,7 @@
 
 	
   @if(isset($logged_user)) | <a href="{!! URL::route('user.logout') !!}"> Logout</a>
-	@endif</span><br/>{!! $logo_info['content']!!}</br></br>
+	@endif</span><br/>{!! isset($logo_info['content'])?$logo_info['content']:null !!}</br></br>
         </div>
 		<div class="content">
     		<nav class="navbar navbar-default">

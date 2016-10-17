@@ -95,6 +95,7 @@
 </div>-->
           <h4>Newest Jobs</h4>
           <div class="newest-classifieds">
+          @if(isset($new_jobs))
 		  @foreach($new_jobs as $new_job)
 		   <?php $images=unserialize($new_job->images); ?>
             <div class="media">
@@ -111,6 +112,7 @@
               </div>
             </div>
 		  @endforeach
+          @endif
             <p class="text-right show-more"><a href="{!! URL::to('') !!}">More &rarr;</a></p>
           </div>
         </div>
