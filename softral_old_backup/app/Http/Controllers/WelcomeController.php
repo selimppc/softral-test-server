@@ -69,7 +69,7 @@ class WelcomeController extends Controller {
 		$hexa_gonal_background = Page::where('id',21)->first();
 		$logged_user = $this->auth->getLoggedUser();
 		
-		$freelancers = User::has('user_profile_avtar.profile_field_type_seller')->with('user_profile_avtar.profile_field_type_tagline')->where('activated',1)->orderByRaw("RAND()")->limit(28)->get();
+		$freelancers = User::where('activated',1)->orderByRaw("RAND()")->limit(28)->get();
 		
 		$employeer_news = Page::with('children_hexa')->where('id',85)->first();
 		$freelancer_news = Page::with('children_hexa')->where('id',80)->first();

@@ -165,10 +165,10 @@ $(document).ready(function() {
   @if(isset($logged_user)) | <a href="{!! URL::route('user.logout') !!}"> Logout</a>
 	@endif</span><br/>
 	
-	 <div class="click2edit1 click2edit{!! $logo_info['id']!!}">{!! $logo_info['content']!!}</div>
+	 <div class="click2edit1 click2edit{!! isset($logo_info['id'])?$logo_info['id']:null !!}">{!! isset($logo_info['content'])?$logo_info['content']:null !!}</div>
 		@if(isset($logged_user) && $logged_user->id==1)
 			<button id="edit1" class="btn btn-primary" onclick="edit1()" type="button">Edit</button>
-			<button id="save1" class="btn btn-primary save" onclick="save1()" type="button" value="{!! $logo_info['id']!!}">Save</button>
+			<button id="save1" class="btn btn-primary save" onclick="save1()" type="button" value="{!! isset($logo_info['id'])?$logo_info['id']:null !!}">Save</button>
 		@endif
 	</br></br>
         </div>
@@ -230,7 +230,7 @@ $(document).ready(function() {
 					<a href="{!! URL::to('/').'/contact' !!}">Contact us</a>
         </div>
         <div class="copy">
-        	All Rights Reserved. Copyright {!! date('Y') !!} © Softral TM
+        	All Rights Reserved. Copyright {!! date('Y') !!} ï¿½ Softral TM
         </div>
     </div>
 </div>
