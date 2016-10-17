@@ -50,6 +50,13 @@ class WelcomeController extends Controller {
 		$this->middleware('guest');
 		$this->auth = $auth;
 	}
+	
+	public function testhome(){
+		
+		return view::make('vendor.laravel-authentication-acl.client.layout.home_page');
+		
+		
+	}
 
 	/**
 	 * Show the application welcome screen to the user.

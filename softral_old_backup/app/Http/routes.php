@@ -16,6 +16,11 @@ Route::get('/', [
 				'uses' => 'WelcomeController@Index'
 		]);
 		
+Route::get('testhome', [
+				'as'   => 'testhome',
+				'uses' => 'WelcomeController@testhome'
+		]);
+		
 Route::get('/shome', [
 				'as'   => 'welcome.home',
 				'uses' => 'WelcomeController@home'
