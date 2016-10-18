@@ -117,13 +117,13 @@
                 <div class="text-center"><img src="{{asset('assets/images/logo-1.png')}}" width="170"></div>
             </div>
             <div class="modal-body moskNormal400">
-               {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post', 'class'=>'col-md-offset-4') ) !!}
+               {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post') ) !!}
 
                     <div class="form-group">
 
 						 {!! Form::email('email', '', ['id' => 'user_name', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off', 'style' => 'background: #ffffff !important; margin-bottom: 3px;']) !!}
 
-						{!! Form::password('password', '', ['id' => 'user_password', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+						{!! Form::password('password', ['class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Password', 'required' => 'required', 'autocomplete' => 'off']) !!}
 
                     </div>
                     <div class="form-group">
