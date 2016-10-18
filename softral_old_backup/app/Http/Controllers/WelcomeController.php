@@ -53,7 +53,7 @@ class WelcomeController extends Controller {
 	
 	public function testhome(){
 		
-		return view::make('vendor.laravel-authentication-acl.client.layout.home_page');
+		return view::make('vendor.laravel-authentication-acl.client.layout.main_welcome');
 		
 		
 	}
