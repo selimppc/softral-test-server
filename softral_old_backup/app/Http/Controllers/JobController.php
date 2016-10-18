@@ -72,9 +72,10 @@ class JobController extends Controller {
 		 $parent_selector = array();
 		 $cant_post=0;
 		 
-		if($logged_user->user_profile[0]->profile_field_type->value!='Buyer' && $logged_user->user_profile[0]->profile_field_type->value!='Both'):
+		/*if($logged_user->user_profile[0]->profile_field_type->value!='Buyer' && $logged_user->user_profile[0]->profile_field_type->value!='Both'):
+
 			return view('laravel-authentication-acl::client.exceptions.404');
-		endif;
+		endif;*/
 		
 		foreach($skills as $skill) {
 			$parent_selector[$skill->id] = $skill->skill; // I assume name attribute contains client name here

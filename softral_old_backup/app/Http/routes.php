@@ -21,6 +21,11 @@ Route::get('testhome', [
 				'uses' => 'WelcomeController@testhome'
 		]);
 		
+Route::get('user-profile', [
+				'as'   => 'user-profile',
+				'uses' => 'WelcomeController@userprofile'
+		]);
+		
 Route::get('/shome', [
 				'as'   => 'welcome.home',
 				'uses' => 'WelcomeController@home'

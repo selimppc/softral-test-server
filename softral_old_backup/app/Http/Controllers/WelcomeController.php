@@ -57,6 +57,10 @@ class WelcomeController extends Controller {
 		
 		
 	}
+	
+	public function userprofile(){
+		return view::make('vendor.laravel-authentication-acl.client.user.profile');
+	}
 
 	/**
 	 * Show the application welcome screen to the user.

@@ -1,5 +1,4 @@
 @extends('laravel-authentication-acl::client.layout.master')
-
 @section('content')
 
 <div class="row content">
@@ -188,4 +187,4 @@ $(".btn-primary").click(function(e) {
 
     </script>
 	
-	  @stop
+@stop
