@@ -196,13 +196,15 @@
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
 
                 <div class="col-md-12">
-                    <form>
+                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
+                    {!! Form::password('__to_hide_password_autocomplete', ['class' => 'hidden']) !!}
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="First name" class="form-control green_light_border">
+                                {!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" class="form-control green_light_border">
+                                {!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off']) !!}
                             </div>
                             <div class="form-group">
                                 <input type="text" placeholder="username" class="form-control green_light_border">
@@ -210,20 +212,18 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="Last name" class="form-control green_light_border">
+                                {!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
                             </div>
                             <div class="form-group">
-                                <select class="form-control green_light_border">
-                                    <option>Bangladesh</option>
-                                    <option>India</option>
-                                    <option>Nepal</option>
-                                    <option>Bhutan</option>
-                                    <option>Myanmar</option>
-                                    <option>Pakistan</option>
-                                </select>
+                                {!! Form::select('country', array('IND'=>'IND') ,'United States',['class' => 'form-control green_light_border','id'=>'country','required']) !!}
+
                             </div>
                             <div class="form-group">
-                                <input type="password" placeholder="password" class="form-control green_light_border">
+                                {!! Form::password('password', ['id' => 'password1', 'class' => 'form-control', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+                            </div>
+
+                            <div class="form-group">
+                                {!! Form::password('password_confirmation', ['class' => 'form-control', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
                             </div>
                         </div>
                         <div class="col-md-12">
