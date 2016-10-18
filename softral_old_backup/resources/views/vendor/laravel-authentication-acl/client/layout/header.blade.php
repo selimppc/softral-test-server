@@ -265,7 +265,7 @@
 							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
 						  </div>
 
-						  {{ Form::hidden('custom_profile_1', 'Seller', array('id' => 'invisible_id')) }}
+						  {!! Form::hidden('custom_profile_1', 'Seller', array('id' => 'invisible_id')) !!}
 
                         </div>
                         <div class="col-md-12">
@@ -297,7 +297,7 @@
 
             <div class="modal-body moskNormal400">
                 <div class="col-md-12 padding-0-0-5-0">
-                    <
+
                     <div class="text-center size-25">&blk14; Create a <strong>Employer</strong> Account</div>
                 </div>
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
@@ -349,7 +349,7 @@
 							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
 						  </div>
 
-						  {{ Form::hidden('custom_profile_1', 'Buyer', array('id' => 'invisible_id')) }}
+						  {!! Form::hidden('custom_profile_1', 'Buyer', array('id' => 'invisible_id')) !!}  
                         </div>
                         <div class="col-md-12">
                             <div class="checkbox">
