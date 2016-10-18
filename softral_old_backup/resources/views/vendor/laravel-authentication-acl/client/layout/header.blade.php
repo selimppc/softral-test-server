@@ -121,9 +121,9 @@
 
                     <div class="form-group">
 
-						 {!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off', 'style' => 'background: #ffffff !important; margin-bottom: 3px;']) !!}
+						 {!! Form::email('email', '', ['id' => 'user_name', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off', 'style' => 'background: #ffffff !important; margin-bottom: 3px;']) !!}
 
-						{!! Form::password('password', '', ['id' => 'password', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+						{!! Form::password('password', '', ['id' => 'user_password', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
 
                     </div>
                     <div class="form-group">
