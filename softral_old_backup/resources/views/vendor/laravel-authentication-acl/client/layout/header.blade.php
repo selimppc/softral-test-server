@@ -82,18 +82,37 @@
                             <ul class="nav navbar-nav navbar-right size-13">
                                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">My Softral<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">My Profile</a></li>
-                                        <li><a href="#">My Setting</a></li>
-                                        <li><a href="#">My Proposals</a></li>
-                                        <li><a href="#">Save Jobs</a></li>
-                                        <li><a href="#">Working Jobs</a></li>
-                                        <li><a href="#">Save Users</a></li>
-                                        <li><a href="#">My Jobs</a></li>
-                                        <li><a href="#">Escrow Contacts</a></li>
-                                        <li><a href="#">User Agreements</a></li>
-                                        <li><a href="#">My Financial Accounts</a></li>
-                                        <li><a href="#">My Workboard</a></li>
-                                        <li><a href="#">Customer Service</a></li>
+										<li>{!! link_to_route('users.selfprofile.edit','My Profile') !!}</li>
+										
+										@if(isset($logged_user)) 
+											<li><a href="{!! URL::to('/').'/user/profile/'.$logged_user->user_profile[0]->slug !!}">View Profile</a></li>
+										@endif
+										
+										@if(!isset($logged_user) || (isset($logged_user->user_profile[0]->profile_field_type->value) && ($logged_user->user_profile[0]->profile_field_type->value=='Seller' || $logged_user->user_profile[0]->profile_field_type->value=='Both')))
+										   <li>{!! link_to_route('job.myProposals','My Proposals') !!}</li>
+									    @endif
+										
+										@if(!isset($logged_user) || (isset($logged_user->user_profile[0]->profile_field_type->value) && ($logged_user->user_profile[0]->profile_field_type->value=='Seller' || $logged_user->user_profile[0]->profile_field_type->value=='Both')))
+										   <li>{!! link_to_route('welcome.saveJobs','Save Jobs') !!}</li> 
+										   <li>{!! link_to_route('welcome.runningJobs','Working Jobs') !!}</li> 
+									    @endif
+										
+										<li>{!! link_to_route('welcome.saveUsers','Save Users') !!}</li>
+
+										@if(!isset($logged_user) || (isset($logged_user->user_profile[0]->profile_field_type->value) && ($logged_user->user_profile[0]->profile_field_type->value=='Buyer' || $logged_user->user_profile[0]->profile_field_type->value=='Both')))
+										   <li>{!! link_to_route('welcome.myJobs','My Jobs') !!}</li> 
+										   <li>{!! link_to_route('welcome.myContracts','Escrow Contracts') !!}</li> 
+										   <li>{!! link_to_route('welcome.user_Agreement','User Agreements') !!}</li> 
+									    @endif										
+                                        
+                                        <li>{!! link_to_route('financial','My Financial Accounts') !!}</li> 
+                                        
+										@if(!isset($logged_user) || (isset($logged_user->user_profile[0]->profile_field_type->value) && ($logged_user->user_profile[0]->profile_field_type->value=='Buyer' || $logged_user->user_profile[0]->profile_field_type->value=='Both')))
+											<!--<li>{!! link_to_route('ad.myAds','My Classifieds') !!}</li> -->
+										  @endif
+										<li>{!! link_to_route('job.myWorkboard','My Workboard') !!}</li>
+										<li>{!! link_to_route('CustomerService','Customer Service') !!}</li>		  
+
                                     </ul>
                                 </li>
                                 <!--<li><a href="#"><span class=""></span> My Softral</a></li>-->
