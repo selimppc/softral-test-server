@@ -52,20 +52,31 @@
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav size-13">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li class=""><a href="#">About Us</a></li>
-                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Jobs<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Post a Job</a></li>
-                                        <li><a href="#">Search for Job</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Tech Mart</a></li>
-                                <li><a href="#">Chat</a></li>
-                                <li><a href="#">Members</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('/')) class="active" @endif><a href="{!! URL::to('/') !!}">Home</a></li>
+								
+								<li @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('pages/about-us')) class="active" @endif><a href="{!! URL::to('/').'/pages/about-us' !!}">About Us</a></li>
+                               
+                                <li class="dropdown @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('add-job') || ('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('shome'))) active @endif ">
+								  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jobs<span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								   @if(!isset($logged_user) || (isset($logged_user->user_profile[0]->profile_field_type->value) && ($logged_user->user_profile[0]->profile_field_type->value=='Buyer' || $logged_user->user_profile[0]->profile_field_type->value=='Both')))											
+										<li>{!! link_to_route('job.addJob','Post a Job') !!}</li>
+									@endif
+								   <li><a href="{!! URL::to('/').'/shome' !!}">Search for Job</a></li>
+								  </ul>
+								</li>
+							
+                               <li><a href="{!! URL::to('/').'/chat/index.php' !!}">Chat</a></li>
+							   
+							   <li @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('all-members')) class="active" @endif>{!! link_to_route('user.members','Members') !!}</li>
+							
+							   <li @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('pages/rules-conditions')) class="active" @endif><a href="{!! URL::to('/').'/pages/rules-conditions' !!}">Terms & Conditions</a></li>
+							   
+							   <li @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('pages/privacy-policy')) class="active" @endif><a href="{!! URL::to('/').'/pages/privacy-policy' !!}">Privacy Policy</a></li>
+							   
+								<li @if('http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']==url('pages/contact-us')) class="active" @endif><a href="{!! URL::to('/').'/pages/contact-us' !!}">Contact us</a></li>
+
 
                             </ul>
                             <ul class="nav navbar-nav navbar-right size-13">
