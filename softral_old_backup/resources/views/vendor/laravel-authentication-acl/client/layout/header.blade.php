@@ -213,35 +213,57 @@
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
 
                 <div class="col-md-12">
-                    <form>
+                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
+					
+						{{-- Field hidden to fix chrome and safari autocomplete bug --}}
+						{!! Form::password('__to_hide_password_autocomplete', ['class' => 'hidden']) !!}
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="First name" class="form-control green_light_border">
+								{!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" class="form-control green_light_border">
+								{!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="username" class="form-control green_light_border">
+							
+							<div class="form-group">
+								{!! Form::password('password', ['id' => 'password1', 'class' => 'form-control green_light_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+							</div>
+							
+							<div class="form-group">
+								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
+                               
                             </div>
+							
+							<div class="form-group">
+								
+								{!! Form::select('skills[]', $skills,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border chzn-select','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
+								
+							</div>
+                            
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="Last name" class="form-control green_light_border">
+								{!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <select class="form-control green_light_border">
-                                    <option>Bangladesh</option>
-                                    <option>India</option>
-                                    <option>Nepal</option>
-                                    <option>Bhutan</option>
-                                    <option>Myanmar</option>
-                                    <option>Pakistan</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="password" class="form-control green_light_border">
-                            </div>
+							
+							<div class="form-group">
+							  <strong>Choose Profile Picture:</strong><span class='input_image'> {!! Form::file('image', ['id' =>'image']) !!}</span>
+						  </div>
+						  
+						   <div class="form-group">
+							 {!! Form::password('password_confirmation', ['class' => 'form-control green_light_border', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
+						  </div>
+							
+                           <div class="form-group">
+							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
+						  </div>
+						  
+						  {{ Form::hidden('custom_profile_1', 'Seller', array('id' => 'invisible_id')) }}
+                            
                         </div>
                         <div class="col-md-12">
                             <div class="checkbox">
@@ -277,35 +299,53 @@
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
 
                 <div class="col-md-12">
-                    <form>
+                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="First name" class="form-control">
+								{!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" class="form-control">
+								{!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="username" class="form-control">
+							
+							<div class="form-group">
+								{!! Form::password('password', ['id' => 'password1', 'class' => 'form-control green_light_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+							</div>
+							
+							<div class="form-group">
+								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
+                               
                             </div>
+							
+							<div class="form-group">
+								
+								{!! Form::select('skills[]', $skills,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border chzn-select','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
+								
+							</div>
+                            
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="Last name" class="form-control">
+								{!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option>Bangladesh</option>
-                                    <option>India</option>
-                                    <option>Nepal</option>
-                                    <option>Bhutan</option>
-                                    <option>Myanmar</option>
-                                    <option>Pakistan</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="password" class="form-control">
-                            </div>
+							
+							<div class="form-group">
+							  <strong>Choose Profile Picture:</strong><span class='input_image'> {!! Form::file('image', ['id' =>'image']) !!}</span>
+						  </div>
+						  
+						   <div class="form-group">
+							 {!! Form::password('password_confirmation', ['class' => 'form-control green_light_border', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
+						  </div>
+							
+                           <div class="form-group">
+							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
+						  </div>
+						  
+						  {{ Form::hidden('custom_profile_1', 'Buyer', array('id' => 'invisible_id')) }}
                         </div>
                         <div class="col-md-12">
                             <div class="checkbox">
@@ -338,3 +378,46 @@
     })
 
 </script>
+
+{!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery-1.10.2.min.js') !!}
+{!! HTML::script('http://morganthall.com/ujo/chosen-koenpunt/chosen.jquery.min.js') !!}
+<script>			
+				$(function() {
+					 $(".chzn-select").chosen({
+						create_option: true,
+						persistent_create_option: true,
+						create_option_text: 'add',
+					});
+					$('input[name="custom_profile_1"]').on('click', function() {
+						if ($(this).val() == 'Seller') {
+							$('#textboxes').show();
+							$('#skills').prop('disabled',false);
+							$("#skills option[value='no']").remove();
+							$('#image').attr("name", 'image');
+							$('.hidden_image').remove();
+						}
+						else {
+							$('#textboxes').hide();
+							$('#image').attr("name", 'image1');
+							$('.input_image').append("<input type='hidden' class='hidden_image' name='image' value='1' />");
+							$('#skills').append('<option value="no">-</option>');
+							$('#skills').append('<option value="no">-</option>');
+							$('#skills').append('<option value="no">-</option>');
+							$('#skills').append('<option value="no">-</option>');
+							$('#skills').append('<option value="no">-</option>');
+							$('#skills').val('no');
+						}
+					});
+			
+			$('#country').on('change', function() {
+				$('#country_code').val($(this).val());
+				country_code=($('#country_code option:selected').text());
+				$('#country_code_hidden').attr('value',country_code);
+			});
+			
+			$('#country_code').on('change', function() {
+				$('#country_code_hidden').attr('value',$('#country_code option:selected').text());
+			});
+		});
+			
+		</script>
