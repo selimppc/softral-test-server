@@ -98,6 +98,15 @@
     </section>
 </header>
 
+ <?php $message = Session::get('message'); ?>
+	@if( isset($message) )
+	<div class="alert alert-success">{!! $message !!}</div>
+	@endif
+	@if($errors && ! $errors->isEmpty() )
+	@foreach($errors->all() as $error)
+	<div class="alert alert-danger" style='color:black;background-color:yellow'>{!! $error !!}</div>
+	@endforeach
+	@endif
 
 <!--=== Modal Login Start =======================-->
 <div class="modal fade bs-example-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -108,21 +117,29 @@
                 <div class="text-center"><img src="{{asset('assets/images/logo-1.png')}}" width="170"></div>
             </div>
             <div class="modal-body moskNormal400">
-                <form>
+               {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post', 'class'=>'col-md-offset-4') ) !!}
 
                     <div class="form-group">
-                        <input type="text" class=" form-control width_full padding-10-7 black inpt_border " style="background: #ffffff !important; margin-bottom: 3px;" id="user_name" placeholder="username" autofocus="autofocus">
-
-                        <input type="password" class="form-control width_full padding-10-7 black inpt_border " id="user_password" placeholder="password">
+					
+						 {!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off', 'style' => 'background: #ffffff !important; margin-bottom: 3px;' "]) !!}
+                        
+						{!! Form::password('password', ['id' => 'password', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+                        
                     </div>
                     <div class="form-group">
                         <div class="checkbox pull-left">
-                            <label><input type="checkbox" id="remember" name="remember" class="black" checked >Remember me</label>
+                            <label>
+								{!! Form::checkbox('remember',['id' => "remember", 'class' => 'black','checked'=>'checked'])!!}
+							Remember me</label>
                         </div>
-                        <button type="submit" class="btn btn-danger padding-10-10 btn-block">Login</button>
-                        <p class="text-center no-margin margin_top_15 size-12"><a href="#">Having trouble logging in?</a><br>Not a member? <a href="#">Join now</a></p>
+                        <button type="submit"  class="btn btn-danger padding-10-10 btn-block">Login</button>
+                        <p class="text-center no-margin margin_top_15 size-12">
+						{!! link_to_route('user.recovery-password','Having trouble logging in?') !!}						
+						<br>
+						Not a member? 
+						<a href="{!! URL::route('user.signup') !!}">Join now</a></p>
                     </div>
-                </form>
+                {!! Form::close() !!}
             </div>
 
         </div>
