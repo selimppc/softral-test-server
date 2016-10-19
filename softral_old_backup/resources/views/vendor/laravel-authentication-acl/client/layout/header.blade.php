@@ -98,7 +98,16 @@
     </section>
 </header>
 
-
+<?php $message = Session::get('message'); ?>
+	@if( isset($message) )
+	<div class="alert alert-success">{!! $message !!}</div>
+	@endif
+	@if($errors && ! $errors->isEmpty() )
+	@foreach($errors->all() as $error)
+	<div class="alert alert-danger" style='color:black;background-color:yellow'>{!! $error !!}</div>
+	@endforeach
+	@endif
+	
 <!--=== Modal Login Start =======================-->
 <div class="modal fade bs-example-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-sm" role="document">
@@ -108,27 +117,36 @@
                 <div class="text-center"><img src="{{asset('assets/images/logo-1.png')}}" width="170"></div>
             </div>
             <div class="modal-body moskNormal400">
-                <form>
+               {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post', 'class'=>'col-md-offset-4') ) !!}
 
                     <div class="form-group">
-                        <input type="text" class=" form-control width_full padding-10-7 black inpt_border " style="background: #ffffff !important; margin-bottom: 3px;" id="user_name" placeholder="username" autofocus="autofocus">
-
-                        <input type="password" class="form-control width_full padding-10-7 black inpt_border " id="user_password" placeholder="password">
+					
+						 {!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off', 'style' => 'background: #ffffff !important; margin-bottom: 3px;' "]) !!}
+                        
+						{!! Form::password('password', ['id' => 'password', 'class' => 'form-control width_full padding-10-7 black inpt_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+                        
                     </div>
                     <div class="form-group">
                         <div class="checkbox pull-left">
-                            <label><input type="checkbox" id="remember" name="remember" class="black" checked >Remember me</label>
+                            <label>
+								{!! Form::checkbox('remember',['id' => "remember", 'class' => 'black','checked'=>'checked'])!!}
+							Remember me</label>
                         </div>
-                        <button type="submit" class="btn btn-danger padding-10-10 btn-block">Login</button>
-                        <p class="text-center no-margin margin_top_15 size-12"><a href="#">Having trouble logging in?</a><br>Not a member? <a href="#">Join now</a></p>
+                        <button type="submit"  class="btn btn-danger padding-10-10 btn-block">Login</button>
+                        <p class="text-center no-margin margin_top_15 size-12">
+						{!! link_to_route('user.recovery-password','Having trouble logging in?') !!}						
+						<br>
+						Not a member? 
+						<a href="{!! URL::route('user.signup') !!}">Join now</a></p>
                     </div>
-                </form>
+                {!! Form::close() !!}
             </div>
 
         </div>
     </div>
 </div>
 <!--=== Modal Signup Start (Step-1)=======================-->
+
 <div class="modal fade bs-example-modal-md" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content bg_trans_white_90" style="margin-top: 5%;">
@@ -183,7 +201,9 @@
         </div>
     </div>
 </div>
+
 <!--===== Modal Freelancer Form start ( Step-2.1)==================-->
+
 <div class="modal fade bs-example-modal-lg" id="sellerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content padding-3-3-prcnt bg_green_super_light margin_top_10_prcnt">
@@ -197,34 +217,56 @@
 
                 <div class="col-md-12">
                     {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
-                    {!! Form::password('__to_hide_password_autocomplete', ['class' => 'hidden']) !!}
-
+					
+						{{-- Field hidden to fix chrome and safari autocomplete bug --}}
+						{!! Form::password('__to_hide_password_autocomplete', ['class' => 'hidden']) !!}
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
+								{!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
                             <div class="form-group">
-                                {!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email address', 'required', 'autocomplete' => 'off']) !!}
+								{!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="username" class="form-control green_light_border">
+							
+							<div class="form-group">
+								{!! Form::password('password', ['id' => 'password1', 'class' => 'form-control green_light_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+							</div>
+							
+							<div class="form-group">
+								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
+                               
                             </div>
+							
+							<div class="form-group">
+								
+								{!! Form::select('skills[]', $skills,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border chzn-select','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
+								
+							</div>
+                            
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
+								{!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                {!! Form::select('country', array('IND'=>'IND') ,'United States',['class' => 'form-control green_light_border','id'=>'country','required']) !!}
-
-                            </div>
-                            <div class="form-group">
-                                {!! Form::password('password', ['id' => 'password1', 'class' => 'form-control', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
-                            </div>
-
-                            <div class="form-group">
-                                {!! Form::password('password_confirmation', ['class' => 'form-control', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
-                            </div>
+							
+							<div class="form-group">
+							  <strong>Choose Profile Picture:</strong><span class='input_image'> {!! Form::file('image', ['id' =>'image']) !!}</span>
+						  </div>
+						  
+						   <div class="form-group">
+							 {!! Form::password('password_confirmation', ['class' => 'form-control green_light_border', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
+						  </div>
+							
+                           <div class="form-group">
+							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
+						  </div>
+						  
+						  {{ Form::hidden('custom_profile_1', 'Seller', array('id' => 'invisible_id')) }}
+                            
                         </div>
                         <div class="col-md-12">
                             <div class="checkbox">
@@ -247,6 +289,7 @@
     </div>
 </div>
 
+
 <!--===== Modal Employer Form start (step-2.2)==================-->
 <div class="modal fade bs-example-modal-lg" id="buyerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -260,35 +303,53 @@
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
 
                 <div class="col-md-12">
-                    <form>
+                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="First name" class="form-control">
+								{!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" class="form-control">
+								{!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="username" class="form-control">
+							
+							<div class="form-group">
+								{!! Form::password('password', ['id' => 'password1', 'class' => 'form-control green_light_border', 'placeholder' => 'Password', 'required', 'autocomplete' => 'off']) !!}
+							</div>
+							
+							<div class="form-group">
+								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
+                               
                             </div>
+							
+							<div class="form-group">
+								
+								{!! Form::select('skills[]', $skills,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border chzn-select','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
+								
+							</div>
+                            
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="Last name" class="form-control">
+								{!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
+                                
                             </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option>Bangladesh</option>
-                                    <option>India</option>
-                                    <option>Nepal</option>
-                                    <option>Bhutan</option>
-                                    <option>Myanmar</option>
-                                    <option>Pakistan</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="password" class="form-control">
-                            </div>
+							
+							<div class="form-group">
+							  <strong>Choose Profile Picture:</strong><span class='input_image'> {!! Form::file('image', ['id' =>'image']) !!}</span>
+						  </div>
+						  
+						   <div class="form-group">
+							 {!! Form::password('password_confirmation', ['class' => 'form-control green_light_border', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
+						  </div>
+							
+                           <div class="form-group">
+							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
+						  </div>
+						  
+						  {{ Form::hidden('custom_profile_1', 'Buyer', array('id' => 'invisible_id')) }}
                         </div>
                         <div class="col-md-12">
                             <div class="checkbox">
@@ -321,3 +382,41 @@
     })
 
 </script>
+
+{!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery-1.10.2.min.js') !!}
+		 <script>
+        $(".delete").click(function(){
+            return confirm("Are you sure to delete this item?");
+        });
+
+		 $(function() {
+        $(".image_edit_delete").click(function(){
+			var id=$(this).attr('id');
+			$('.'+id).remove();
+		});
+
+		$(".job_type").click(function(){
+			var val=$(this).val();
+			if(val=='fixed'){
+				$('.hourly').hide();
+				$('#budget').attr('placehoder','Enter your amount');
+			}
+			else{
+				$('.hourly').show();
+				$('#budget').attr('placeholder','Amount/Hour');
+			}
+		});
+
+		  $('[data-toggle="tooltip"]').tooltip();
+
+$(".btn-primary").click(function(e) {
+    if ( $(this).hasClass("disabled"))
+    {
+		return false;
+    }
+});
+    });
+
+    </script>
+	
+@stop
