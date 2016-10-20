@@ -138,20 +138,13 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content padding-3-3-prcnt bg_trans_white_90" style="margin-top: 35%;">
             <div class="modal-header no-border text-center uppercase">
-                @if($errors->any())
-                    <div class="alert alert-danger alert-dismissible fade in" role="alert"> 
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button> 
-                         @foreach($errors->all() as $error)
-                            <p>{{ $error }}</p>
-                        @endforeach
-                    </div>
-                @endif
+
+                    <div id="login-responce"></div>
+
                 <div class="text-center"><img src="{{asset('assets/images/logo-1.png')}}" width="170"></div>
             </div>
             <div class="modal-body moskNormal400">
-               {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post') ) !!}
+               {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post', 'id' => 'loginForm') ) !!}
 
                     <div class="form-group">
 
@@ -166,7 +159,8 @@
                                 {!! Form::checkbox('remember','',['id' => "remember", 'class' => 'black','checked'=>'checked']) !!}
                             Remember me</label>
                         </div>
-                        <button type="submit"  class="btn btn-danger padding-10-10 btn-block">Login</button>
+                        <input readonly="readonly" type="hidden" name="from_header" value="1">
+                        <button type="submit" id="login-submit" class="btn btn-danger padding-10-10 btn-block">Login</button>
                         <p class="text-center no-margin margin_top_15 size-12">
                         {!! link_to_route('user.recovery-password','Having trouble logging in?') !!}
                         <br>
@@ -478,6 +472,62 @@
 		@endforeach
                     
     @endif
+
+<script type="text/javascript">
+    $(function() {
+        $("#loginForm").submit(function(e) {
+            e.preventDefault(); 
+            var postData = $(this).serializeArray();
+            var formURL = $(this).attr("action");
+            $('#login-submit').attr('disabled', true);
+            $('#login-submit').html('Loading...');
+            $.ajax(
+                {
+                    url : formURL,
+                    type: "POST",
+                    data : postData,
+                    success:function(responce) 
+                    {
+                        if(responce.length){
+                            responce = JSON.parse(responce);
+
+                            if(responce.success == false){
+                                $('#login-responce').empty();
+                                responceMarkUp =  '<div class="alert alert-danger alert-dismissible fade in" role="alert">'; 
+                                responceMarkUp +=   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                                responceMarkUp +=       '<span aria-hidden="true">×</span>';
+                                responceMarkUp +=   '</button>';
+                                responceMarkUp +=   '<small>'+responce.message+'</small>';
+                                responceMarkUp += '</div>'
+                                $('#login-responce').prepend(responceMarkUp);
+                                $('#login-submit').html('Login');
+                            }else {
+                                $('#login-responce').empty();
+                                responceMarkUp =  '<div class="alert alert-success alert-dismissible fade in" role="alert">'; 
+                                responceMarkUp +=   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                                responceMarkUp +=       '<span aria-hidden="true">×</span>';
+                                responceMarkUp +=   '</button>';
+                                responceMarkUp +=   '<small>'+responce.message+'</small>';
+                                responceMarkUp += '</div>'
+                                $('#login-responce').prepend(responceMarkUp);
+                                $('#login-submit').html('Login');
+                                window.location.href = responce.redirectUrl;
+
+                            }
+                        }
+
+                        $('#login-submit').removeAttr('disabled');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) 
+                    {
+                        console.log('Something went wrong');
+                        $('#login-submit').removeAttr('disabled');
+                        $('#login-submit').html('Login');
+                    }
+                });
+        });
+    });
+</script>    
 	
 		
 		
