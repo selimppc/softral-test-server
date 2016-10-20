@@ -460,3 +460,24 @@
         });
 
     </script>
+	
+	@if($errors->any())
+                    
+		@foreach($errors->all() as $error)
+			
+			@if($error == 'Login failed.')
+				<script>
+		
+					$( document ).ready(function() {
+						$("#loginModal").modal('show');
+					});
+					
+				</script>
+			@endif
+			
+		@endforeach
+                    
+    @endif
+	
+		
+		
