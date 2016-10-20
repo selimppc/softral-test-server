@@ -260,7 +260,7 @@
 							</div>
 
 							<div class="form-group">
-								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								{!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
 								
 								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
 
@@ -350,7 +350,7 @@
 							</div>
 
 							<div class="form-group">
-								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								{!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
 								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
 
                             </div>
