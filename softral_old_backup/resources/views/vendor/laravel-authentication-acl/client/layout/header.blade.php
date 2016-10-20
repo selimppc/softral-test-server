@@ -251,7 +251,7 @@
 
                             </div>
                             <div class="form-group">
-								{!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email', 'required', 'autocomplete' => 'off']) !!}
+								{!! Form::email('email', '', ['id' => 'email', 'class' => 'form-control green_light_border', 'placeholder' => 'Email Address', 'required', 'autocomplete' => 'off']) !!}
 
                             </div>
 
@@ -261,13 +261,14 @@
 
 							<div class="form-group">
 								{!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+								
 								<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
 
                             </div>
 
 							<div class="form-group">
 
-								{!! Form::select('skills[]', $skills,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border chzn-select','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
+								{!! Form::select('skills[]', $skills,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
 
 							</div>
 
@@ -287,8 +288,13 @@
 						  </div>
 
                            <div class="form-group">
+						   {!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+							<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
+						   </div>
+						   
+						   <div>
 							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
-						  </div>
+						   </div>
 
 						  {!! Form::hidden('custom_profile_1', 'Seller', array('id' => 'invisible_id')) !!}
 
@@ -349,11 +355,8 @@
 
                             </div>
 
-							<div class="form-group">
-
-								{!! Form::select('skills[]', isset($skills)?$skills:null,'skills',['id'=>'skills','required','multiple'=>true, 'hidden'=>true,'class'=>'form-control green_light_border chzn-select','style'=>'width:100%','data-placeholder'=>'Select a skill']) !!}
-
-							</div>
+							
+							
 
                         </div>
                         <div class="col-md-6">
@@ -369,6 +372,11 @@
 						   <div class="form-group">
 							 {!! Form::password('password_confirmation', ['class' => 'form-control green_light_border', 'id' =>'password2', 'placeholder' => 'Confirm password', 'required']) !!}
 						  </div>
+						  
+						  <div class="form-group">
+						   {!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+							<input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
+						   </div>
 
                            <div class="form-group">
 							{!! Form::text('phone', '', ['id' => 'phone', 'class' => 'form-control green_light_border', 'placeholder' => 'Mobile number', 'required', 'autocomplete' => 'off']) !!}
