@@ -1,11 +1,4 @@
-<div class="modal fade bs-example-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content padding-3-3-prcnt bg_trans_white_90" style="margin-top: 35%;">
-            <div class="modal-header no-border text-center uppercase">
 
-                <div class="text-center"><img src="{{asset('assets/images/logo-1.png')}}" width="170"></div>
-            </div>
-            <div class="modal-body moskNormal400">
                {!! Form::open(array('url' => URL::route("user.login"), 'method' => 'post') ) !!}
 
                     <div class="form-group">
@@ -29,8 +22,4 @@
 						<a href="{!! URL::route('user.signup') !!}">Join now</a></p>
                     </div>
                 {!! Form::close() !!}
-            </div>
-
-        </div>
-    </div>
-</div>
+            
