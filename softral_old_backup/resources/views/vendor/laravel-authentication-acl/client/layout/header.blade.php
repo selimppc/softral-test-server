@@ -291,7 +291,7 @@
                           </div>
 
                            <div class="form-group">
-                           {!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+                           {!! Form::select('country_code', isset($city)?$city:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
                             <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
                            </div>
                            
@@ -359,7 +359,7 @@
                             </div>
 
                             
-                            
+
 
                         </div>
                         <div class="col-md-6">
@@ -377,7 +377,7 @@
                           </div>
                           
                           <div class="form-group">
-                           {!! Form::select('country_code', isset($countries)?$countries:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+                           {!! Form::select('country_code', isset($city)?$city:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
                             <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
                            </div>
 

@@ -80,6 +80,18 @@ class JobController extends Controller {
 		foreach($skills as $skill) {
 			$parent_selector[$skill->id] = $skill->skill; // I assume name attribute contains client name here
 		}
+
+		$countries = DB::table('countries')->get();
+		$countries_selector = array();
+		$countries_selector['']='Select Country';
+		foreach($countries as $country) {
+			$countries_selector[$country->name] = $country->name; // I assume name attribute contains client name here
+		}
+
+
+		foreach($countries as $country) {
+			$city_selector[$country->capital] = $country->capital; // I assume name attribute contains client name here
+		}
 		
 		if((Input::get('id'))):
             $job = Job::where('user_id',$logged_user->id)->where('id',Input::get('id'))->first();
@@ -103,7 +115,7 @@ class JobController extends Controller {
 			endif;
 		endif;
 		//dd($job);exit;
-		 return View::make('job.addjob')->with([ 'categories'   => $categories,'skills'   => $parent_selector,'job'=>$job,'cant_post'=>$cant_post]);
+		 return View::make('job.addjob')->with([ 'categories'   => $categories,'skills'   => $parent_selector,'countries'   => $countries_selector,'city'   => $city_selector,'job'=>$job,'cant_post'=>$cant_post]);
 	}
 	
 	public function Jobsave(Request $request)
