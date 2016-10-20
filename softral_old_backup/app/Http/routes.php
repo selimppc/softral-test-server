@@ -21,6 +21,11 @@ Route::get('testhome', [
 				'uses' => 'WelcomeController@testhome'
 		]);
 		
+Route::get('signintest', [
+				'as'   => 'testhome',
+				'uses' => 'WelcomeController@signintest'
+		]);
+		
 Route::get('user-profile', [
 				'as'   => 'user-profile',
 				'uses' => 'WelcomeController@userprofile'

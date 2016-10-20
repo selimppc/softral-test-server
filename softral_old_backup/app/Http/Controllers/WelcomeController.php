@@ -58,6 +58,11 @@ class WelcomeController extends Controller {
 		
 	}
 	
+	public function signintest(){
+		
+		return view::make('vendor.laravel-authentication-acl.client.layout.signin');
+	}
+	
 	public function userprofile(){
 		return view::make('vendor.laravel-authentication-acl.client.user.profile');
 	}
