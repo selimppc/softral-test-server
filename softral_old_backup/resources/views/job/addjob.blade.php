@@ -1,6 +1,5 @@
 @extends('laravel-authentication-acl::client.layout.master')
 @section('content')
-
 <div class="row content">
 
         <div class="col-lg-12 content-right">
@@ -15,19 +14,6 @@
                 </div>
             </div>
             <div class="panel-body">
-			 <?php $message = Session::get('message'); ?>
-        @if( isset($message) )
-        <div class="alert alert-success">{!! $message !!}</div>
-        @endif
-       @if($errors->any())
-			<div class="alert alert-danger">
-				@foreach($errors->all() as $error)
-					<p>{{ $error }}</p>
-				@endforeach
-			</div>
-		@endif
-
-
 
                 <div class="col-md-12 col-xs-12">
                  @if(isset($job->id))

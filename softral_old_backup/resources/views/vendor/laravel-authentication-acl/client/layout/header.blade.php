@@ -133,16 +133,6 @@
     </section>
 </header>
 
-<?php $message = Session::get('message'); ?>
-	@if( isset($message) )
-	<div class="alert alert-success">{!! $message !!}</div>
-	@endif
-	@if($errors && ! $errors->isEmpty() )
-	@foreach($errors->all() as $error)
-	<div class="alert alert-danger" style='color:black;background-color:yellow'>{!! $error !!}</div>
-	@endforeach
-	@endif
-
 <!--=== Modal Login Start =======================-->
 <div class="modal fade bs-example-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-sm" role="document">
