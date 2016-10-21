@@ -236,19 +236,23 @@
 
 <!--===== Modal Freelancer Form start ( Step-2.1)==================-->
 
+
+
 <div class="modal fade bs-example-modal-lg" id="sellerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content padding-3-3-prcnt bg_green_super_light margin_top_10_prcnt">
 
             <div class="modal-body moskNormal400">
                 <div class="col-md-12 padding-0-0-5-0">
-
+				
+					<div id="frelancer-responce"></div>
+					
                     <div class="text-center size-25 green_blackish">&blk14; Create a <strong>Freelancer</strong> Account</div>
                 </div>
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
 
                 <div class="col-md-12">
-                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
+                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "frelancer_signup","enctype"=>"multipart/form-data"]) !!}
 
                         {{-- Field hidden to fix chrome and safari autocomplete bug --}}
                         {!! Form::password('__to_hide_password_autocomplete', ['class' => 'hidden']) !!}
@@ -304,6 +308,8 @@
                            </div>
 
                           {!! Form::hidden('custom_profile_1', 'Seller', array('id' => 'invisible_id')) !!}
+						  
+
 
                         </div>
                         <div class="col-md-12">
@@ -315,7 +321,7 @@
                         </div>
                         <div class="col-md-12 text-center">
                             <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">&lAarr; Back</button>
-                            <button type="submit" class="btn btn-success">&check; Create</button>
+                            <button type="submit" id="frelancer_submit" class="btn btn-success">&check; Create</button>
                         </div>
                     </form>
                 </div>
@@ -335,13 +341,15 @@
 
             <div class="modal-body moskNormal400">
                 <div class="col-md-12 padding-0-0-5-0">
+				
+					<div id="employer-responce"></div>
 
                     <div class="text-center size-25">&blk14; Create a <strong>Employer</strong> Account</div>
                 </div>
                 <div class="col-md-12"><div class="">&nbsp;</div></div>
 
                 <div class="col-md-12">
-                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "user_signup","enctype"=>"multipart/form-data"]) !!}
+                    {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "employer_signup","enctype"=>"multipart/form-data"]) !!}
                         <div class="col-md-6">
                             <div class="form-group">
                                 {!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
@@ -357,7 +365,7 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+                                {!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country','required','data-placeholder'=>'Select a country']) !!}
                                 <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
 
                             </div>
@@ -400,7 +408,7 @@
                         </div>
                         <div class="col-md-12 text-center">
                             <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">&lAarr; Back</button>
-                            <button type="submit" class="btn btn-danger">&check; Create</button>
+                            <button type="submit" id="employer_submit" class="btn btn-danger">&check; Create</button>
                         </div>
                     </form>
                 </div>
@@ -428,6 +436,7 @@
         $(".delete").click(function(){
             return confirm("Are you sure to delete this item?");
         });
+		
 
          $(function() {
         $(".image_edit_delete").click(function(){
@@ -527,6 +536,123 @@
                         console.log('Something went wrong');
                         $('#login-submit').removeAttr('disabled');
                         $('#login-submit').html('Login');
+                    }
+                });
+        });
+    });
+	
+	
+	
+	$(function() {
+        $("#frelancer_signup").submit(function(e) {
+            e.preventDefault(); 
+			
+            var postData = $(this).serializeArray();
+            var formURL = $(this).attr("action");
+            $('#frelancer_submit').attr('disabled', true);
+            $('#frelancer_submit').html('Loading...');
+            $.ajax(
+                {
+                    url : formURL,
+                    type: "POST",
+                    data : postData,
+                    success:function(responce) 
+                    {
+                        if(responce.length){
+                            responce = JSON.parse(responce);
+
+                            if(responce.success == false){
+								
+                                $('#frelancer-responce').empty();
+                                responceMarkUp =  '<div class="alert alert-danger alert-dismissible fade in" role="alert">'; 
+                                responceMarkUp +=   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                                responceMarkUp +=       '<span aria-hidden="true">×</span>';
+                                responceMarkUp +=   '</button>';
+                                responceMarkUp +=   '<small>'+responce.message+'</small>';
+                                responceMarkUp += '</div>'
+                                $('#frelancer-responce').prepend(responceMarkUp);
+                                $('#frelancer_submit').html('Create');
+                            }else {
+								
+                                $('#frelancer-responce').empty();
+                                responceMarkUp =  '<div class="alert alert-success alert-dismissible fade in" role="alert">'; 
+                                responceMarkUp +=   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                                responceMarkUp +=       '<span aria-hidden="true">×</span>';
+                                responceMarkUp +=   '</button>';
+                                responceMarkUp +=   '<small>'+responce.message+'</small>';
+                                responceMarkUp += '</div>'
+                                $('#frelancer-responce').prepend(responceMarkUp);
+                                $('#frelancer_submit').html('Create');
+                                window.location.href = responce.redirectUrl;
+
+                            }
+                        }
+
+                        $('#frelancer_submit').removeAttr('disabled');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) 
+                    {
+                        console.log('Something went wrong');
+                        $('#frelancer_submit').removeAttr('disabled');
+                        $('#frelancer_submit').html('Sign up');
+                    }
+                });
+        });
+    });
+	
+	
+	$(function() {
+        $("#employer_signup").submit(function(e) {
+            e.preventDefault(); 
+			
+            var postData = $(this).serializeArray();
+            var formURL = $(this).attr("action");
+            $('#employer_submit').attr('disabled', true);
+            $('#employer_submit').html('Loading...');
+            $.ajax(
+                {
+                    url : formURL,
+                    type: "POST",
+                    data : postData,
+                    success:function(responce) 
+                    {
+                        if(responce.length){
+                            responce = JSON.parse(responce);
+
+                            if(responce.success == false){
+								
+                                $('#employer-responce').empty();
+                                responceMarkUp =  '<div class="alert alert-danger alert-dismissible fade in" role="alert">'; 
+                                responceMarkUp +=   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                                responceMarkUp +=       '<span aria-hidden="true">×</span>';
+                                responceMarkUp +=   '</button>';
+                                responceMarkUp +=   '<small>'+responce.message+'</small>';
+                                responceMarkUp += '</div>'
+                                $('#employer-responce').prepend(responceMarkUp);
+                                $('#employer_submit').html('Create');
+                            }else {
+								
+                                $('#employer-responce').empty();
+                                responceMarkUp =  '<div class="alert alert-success alert-dismissible fade in" role="alert">'; 
+                                responceMarkUp +=   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                                responceMarkUp +=       '<span aria-hidden="true">×</span>';
+                                responceMarkUp +=   '</button>';
+                                responceMarkUp +=   '<small>'+responce.message+'</small>';
+                                responceMarkUp += '</div>'
+                                $('#employer-responce').prepend(responceMarkUp);
+                                $('#employer_submit').html('Create');
+                                window.location.href = responce.redirectUrl;
+
+                            }
+                        }
+
+                        $('#employer_submit').removeAttr('disabled');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) 
+                    {
+                        console.log('Something went wrong');
+                        $('#employer_submit').removeAttr('disabled');
+                        $('#employer_submit').html('Sign up');
                     }
                 });
         });
