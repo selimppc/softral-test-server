@@ -117,8 +117,12 @@
                                 </li>
                                 <!--<li><a href="#"><span class=""></span> My Softral</a></li>-->
                                 
-                                <li><a href="#" class="sign" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                                <li><a href="#" class="sign_1" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+								@if(!isset($logged_user)) 
+									
+									<li><a href="#" class="sign" data-toggle="modal" data-target="#loginModal">Login</a></li>
+									<li><a href="#" class="sign_1" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+									
+								@endif
                                 
                                 @if(isset($logged_user)) 
                                 <li><a href="{!! URL::route('user.logout') !!}" class="sign">Logout</a></li>

@@ -53,7 +53,27 @@ class WelcomeController extends Controller {
 	
 	public function testhome(){
 		
-		return view::make('vendor.laravel-authentication-acl.client.layout.main_welcome');
+		$skills = Skill::get();
+		
+		$parent_selector = array();
+		
+		foreach($skills as $skill) {
+			$parent_selector[$skill->id] = $skill->skill; // I assume name attribute contains client name here
+		}
+		
+		$countries = DB::table('countries')->get();
+		$countries_selector = array();
+		$countries_selector['']='Select Country';
+		foreach($countries as $country) {
+			$countries_selector[$country->name] = $country->name; // I assume name attribute contains client name here
+		}
+		
+		foreach($countries as $country) {
+			$city_selector[$country->capital] = $country->capital; // I assume name attribute contains client name here
+		}
+		
+		
+		return view::make('vendor.laravel-authentication-acl.client.layout.main_welcome')->with(['skills'   => $parent_selector,'countries'   => $countries_selector,'city'   => $city_selector]);
 		
 		
 	}
