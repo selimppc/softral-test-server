@@ -56,13 +56,16 @@
 
     <!-- Content -->
     <section class="wrap">
-        @if($errors->any())
+       
+<!--	   @if($errors->any())
             <ul class="alert alert-danger">
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
         @endif
+		
+		-->
 
         {{--set some message after action--}}
         @if (Session::has('message'))
