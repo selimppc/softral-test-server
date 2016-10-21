@@ -623,8 +623,6 @@
         $("#employer_signup").submit(function(e) {
             e.preventDefault(); 
 			
-			
-			
             var postData = $(this).serializeArray();
             var formURL = $(this).attr("action");
             $('#employer_submit').attr('disabled', true);
