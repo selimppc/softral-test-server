@@ -376,6 +376,15 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+							
+								<select hidden name="skills[]" multiple>
+									<option selected value="">No</option>
+									<option selected value="">No</option>
+									<option selected value="">No</option>
+									<option selected value="">No</option>
+									<option selected value="">No</option>
+								</select>
+							
                                 {!! Form::text('last_name', '', ['id' => 'last_name', 'class' => 'form-control green_light_border', 'placeholder' => 'Last Name', 'required', 'autocomplete' => 'off']) !!}
 
                             </div>
@@ -428,6 +437,8 @@
     $('#signupModal').on('shown.bs.modal', function () {
         $('#user_name').focus();
     })
+	
+	
 
 </script>
 
@@ -604,6 +615,8 @@
 	$(function() {
         $("#employer_signup").submit(function(e) {
             e.preventDefault(); 
+			
+			
 			
             var postData = $(this).serializeArray();
             var formURL = $(this).attr("action");
