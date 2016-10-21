@@ -562,7 +562,7 @@
         $("#frelancer_signup").submit(function(e) {
             e.preventDefault(); 
 			
-            var postData = $(this).serializeArray();
+            //var postData = $(this).serializeArray();
             var formURL = $(this).attr("action");
             $('#frelancer_submit').attr('disabled', true);
             $('#frelancer_submit').html('Loading...');
@@ -570,7 +570,10 @@
                 {
                     url : formURL,
                     type: "POST",
-                    data : postData,
+                    data : new FormData(this),
+                    contentType: false,       
+                    cache: false,            
+                    processData:false, 
                     success:function(responce) 
                     {
                         if(responce.length){
@@ -630,7 +633,10 @@
                 {
                     url : formURL,
                     type: "POST",
-                    data : postData,
+                    data : new FormData(this),
+                    contentType: false,       
+                    cache: false,            
+                    processData:false,
                     success:function(responce) 
                     {
                         if(responce.length){
