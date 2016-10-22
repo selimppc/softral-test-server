@@ -253,6 +253,8 @@
 
                 <div class="col-md-12">
                     {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "frelancer_signup","enctype"=>"multipart/form-data"]) !!}
+					
+						<input type="hidden" name="from_header_signup" value="from_header_signup">
 
                         {{-- Field hidden to fix chrome and safari autocomplete bug --}}
                         {!! Form::password('__to_hide_password_autocomplete', ['class' => 'hidden']) !!}
@@ -350,6 +352,8 @@
 
                 <div class="col-md-12">
                     {!! Form::open(["route" => 'user.signup.process', "method" => "POST", "id" => "employer_signup","enctype"=>"multipart/form-data"]) !!}
+					
+					<input type="hidden" name="from_header_signup" value="from_header_signup">
                         <div class="col-md-6">
                             <div class="form-group">
                                 {!! Form::text('first_name', '', ['id' => 'first_name', 'class' => 'form-control green_light_border', 'placeholder' => 'First Name', 'required', 'autocomplete' => 'off']) !!}
