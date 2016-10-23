@@ -475,5 +475,33 @@ footer { width: 100%; height: auto; background: #252525}
     .bot_logo_ttl sub { position: absolute; bottom: 11px; right: -20px; font-size: 12px;}
 
 
+/*for mobile menu stylings starts*/
+    #bs-example-navbar-collapse-1 {
+        position: relative;
+        z-index: 999;
+        background-color: #000;
+    }
+    .custom-login-container {
+        width: 160px;
+    }
+    .custom-login-container ul {
+
+    }
+    .custom-login-container ul li {
+        display: inline-block;
+    }
+    .custom-login-container ul li a{
+        text-align: center;
+    }
+    .login-item, .logout-item {
+        width: 70px;
+    }
+    .signup-item {
+        width: 90px;
+    }
+
+/*for mobile menu stylings ends*/
+
+
 
 

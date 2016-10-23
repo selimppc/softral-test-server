@@ -48,7 +48,21 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
+                            <span class="visible-xs visible-sm custom-login-container">
+                                <ul class="nav navbar-nav size-13">
+                                @if(!isset($logged_user)) 
+                                    
+                                    <li class="login-item"><a href="#" class="sign" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                                    <li class="signup-item"><a href="#" class="sign_1" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+                                @endif
+                                
+                                @if(isset($logged_user)) 
+                                    <li class="logout-item"><a href="{!! URL::route('user.logout') !!}" class="sign">Logout</a></li>
+                                @endif
+                                </ul>
+                            </span>
                         </div>
+                        
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav size-13">
@@ -119,13 +133,13 @@
                                 
 								@if(!isset($logged_user)) 
 									
-									<li><a href="#" class="sign" data-toggle="modal" data-target="#loginModal">Login</a></li>
-									<li><a href="#" class="sign_1" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+									<li><a href="#" class="sign hidden-xs hidden-sm" data-toggle="modal" data-target="#loginModal">Login</a></li>
+									<li><a href="#" class="sign_1 hidden-xs hidden-sm" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
 									
 								@endif
                                 
                                 @if(isset($logged_user)) 
-                                <li><a href="{!! URL::route('user.logout') !!}" class="sign">Logout</a></li>
+                                <li><a href="{!! URL::route('user.logout') !!}" class="sign hidden-xs hidden-sm">Logout</a></li>
                                 @endif
                             </ul>
                         </div>
