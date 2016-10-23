@@ -238,13 +238,43 @@ class UserController extends Controller {
         return View::make('laravel-authentication-acl::client.auth.signup');
     }
 
+    
     public function postSignup()
     {
-		
 		if(isset($_POST['from_header_signup'])){
 			
 			$service = App::make('register_service');
 
+            /* image upload starts */
+            
+            $valid_extensions = array('jpeg', 'jpg', 'png', 'gif', 'bmp'); // valid extensions
+            $path = base_path() . '/public/images/';
+            $img_ready_to_upload = false;
+            $img_uploaded = false;
+
+            if(isset($_FILES['image'])) {
+                $img = $_FILES['image']['name'];
+                $tmp = $_FILES['image']['tmp_name'];
+
+                // get uploaded file's extension
+                $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+
+                // can upload same image using rand function
+                $final_image = rand(1000,1000000).'-'.$img;
+
+                // check's valid format
+                if(in_array($ext, $valid_extensions)) {     
+                    $img_ready_to_upload = true;
+                } 
+                else {
+                    $responceData['success'] = false;
+                    $responceData['message'] = 'Invalid image file';
+                    return json_encode($responceData);
+                }
+            }
+
+            /* image upload ends */
+            
 			try
 			{
 				
@@ -253,9 +283,18 @@ class UserController extends Controller {
 				$responceData['success'] = true;
 				$responceData['message'] = 'Successfully Sign up';
 				$responceData['redirectUrl'] = url('/user/signup-success');
+
+                if($img_ready_to_upload == true) {
+                   $path = $path.strtolower($final_image); 
+                   if(move_uploaded_file($tmp,$path)){
+                        $img_uploaded = true;
+                    } 
+                }
+                
 				return json_encode($responceData);
 				
-			} catch(JacopoExceptionsInterface $e)
+			} 
+            catch(JacopoExceptionsInterface $e)
 			{
 				$error = '';
 				$errors = $service->getErrors();
@@ -268,10 +307,8 @@ class UserController extends Controller {
 				$responceData['message'] = $error;
 				return json_encode($responceData);
 							
-			   // return Redirect::route('user.signup')->withErrors($service->getErrors())->withInput();
 			}
 
-			//return Redirect::route("user.signup-success");
 			
 		}else{
 			
@@ -293,7 +330,6 @@ class UserController extends Controller {
 		}
         
     }
-
     public function signupSuccess()
     {
         $email_confirmation_enabled = Config::get('acl_base.email_confirmation');
