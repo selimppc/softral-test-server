@@ -273,7 +273,7 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country_code','required','data-placeholder'=>'Select a country']) !!}
+                                {!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border country','id'=>'country','required','data-placeholder'=>'Select a country']) !!}
                                 
                                 <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
 
@@ -301,7 +301,7 @@
                           </div>
 
                            <div class="form-group">
-                           {!! Form::select('country_code', isset($city)?$city:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+                           {!! Form::select('country_code', isset($city)?$city:array(),'United States',['class' => 'form-control country_code','id'=>'country_code','required']) !!}
                             <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
                            </div>
                            
@@ -369,7 +369,7 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border','id'=>'country','required','data-placeholder'=>'Select a country']) !!}
+                                {!! Form::select('country', isset($countries)?$countries:array(),'United States',['class' => 'form-control green_light_border country','id'=>'country','required','data-placeholder'=>'Select a country']) !!}
                                 <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
 
                             </div>
@@ -402,7 +402,7 @@
                           </div>
                           
                           <div class="form-group">
-                           {!! Form::select('country_code', isset($city)?$city:array(),'United States',['class' => 'form-control','id'=>'country_code','required']) !!}
+                           {!! Form::select('country_code', isset($city)?$city:array(),'United States',['class' => 'form-control country_code','id'=>'country_code','required']) !!}
                             <input type='hidden' name='country_code_hidden' value='1' id='country_code_hidden' />
                            </div>
 
@@ -677,6 +677,19 @@
                     }
                 });
         });
+		
+		
+		$('.country').on('change', function() {
+			$('.country_code').val($(this).val());
+			country_code=($('.country_code option:selected').text());
+			$('#country_code_hidden').attr('value',country_code);
+		});
+		
+		$('#country_code').on('change', function() {
+			$('#country_code_hidden').attr('value',$('.country_code option:selected').text());
+		});
+						
+						
     });
 </script>    
 	

@@ -90,7 +90,7 @@ class JobController extends Controller {
 
 
 		foreach($countries as $country) {
-			$city_selector[$country->capital] = $country->capital; // I assume name attribute contains client name here
+			$city_selector[$country->name] = $country->calling_code; // I assume name attribute contains client name here
 		}
 		
 		if((Input::get('id'))):
