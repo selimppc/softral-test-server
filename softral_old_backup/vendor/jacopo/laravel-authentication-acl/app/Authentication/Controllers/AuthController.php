@@ -5,6 +5,7 @@ use LaravelAcl\Authentication\Validators\ReminderValidator;
 use LaravelAcl\Library\Exceptions\JacopoExceptionsInterface;
 use LaravelAcl\Authentication\Services\ReminderService;
 
+
 class AuthController extends Controller {
 
     protected $authenticator;
@@ -50,22 +51,54 @@ class AuthController extends Controller {
 
     public function postClientLogin()
     {
-        list($email, $password, $remember) = $this->getLoginInput();
 
-        try
-        {
-            $this->authenticator->authenticate(array(
-                                                    "email" => $email,
-                                                    "password" => $password
-                                               ), $remember);
-        }
-        catch(JacopoExceptionsInterface $e)
-        {
-            $errors = $this->authenticator->getErrors();
-            return redirect()->route("user.login")->withInput()->withErrors($errors);
-        }
+        if(isset($_POST['from_header'])){
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            if(isset($_POST['remember'])){
+                $remember = $_POST['remember'];
+            }
+            
+            list($email, $password, $remember) = $this->getLoginInput();
 
-        return Redirect::to(Config::get('acl_base.user_login_redirect_url'));
+            try
+            {
+                $this->authenticator->authenticate(array(
+                                                        "email" => $email,
+                                                        "password" => $password
+                                                   ), $remember);
+                $responceData['success'] = true;
+                $responceData['message'] = 'Successfully Logged in';
+                $responceData['redirectUrl'] = url('/');
+                return json_encode($responceData);
+            }
+            catch(JacopoExceptionsInterface $e)
+            {
+                $errors = $this->authenticator->getErrors();
+                $responceData['success'] = false;
+                $responceData['message'] = 'Invalid Email or Password';
+                return json_encode($responceData);
+            }
+        } else {
+
+            list($email, $password, $remember) = $this->getLoginInput();
+
+            try
+            {
+                $this->authenticator->authenticate(array(
+                                                        "email" => $email,
+                                                        "password" => $password
+                                                   ), $remember);
+            }
+            catch(JacopoExceptionsInterface $e)
+            {
+                $errors = $this->authenticator->getErrors();
+                return redirect()->route("user.login")->withInput()->withErrors($errors);
+            }
+
+            return Redirect::to(Config::get('acl_base.user_login_redirect_url'));
+        }
+        
     }
 
     /**

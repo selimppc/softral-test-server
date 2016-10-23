@@ -240,17 +240,58 @@ class UserController extends Controller {
 
     public function postSignup()
     {
-        $service = App::make('register_service');
+		
+		if(isset($_POST['from_header_signup'])){
+			
+			$service = App::make('register_service');
+
+			try
+			{
+				
+				$service->register(Input::all());
+				
+				$responceData['success'] = true;
+				$responceData['message'] = 'Successfully Sign up';
+				$responceData['redirectUrl'] = url('/user/signup-success');
+				return json_encode($responceData);
+				
+			} catch(JacopoExceptionsInterface $e)
+			{
+				$error = '';
+				$errors = $service->getErrors();
+				
+				foreach($errors->all() as $error){
+						$error = $error;
+				}
+				
+				$responceData['success'] = false;
+				$responceData['message'] = $error;
+				return json_encode($responceData);
+							
+			   // return Redirect::route('user.signup')->withErrors($service->getErrors())->withInput();
+			}
+
+			//return Redirect::route("user.signup-success");
+			
+		}else{
+			
+			$service = App::make('register_service');
 
         try
         {
+			
             $service->register(Input::all());
+			
         } catch(JacopoExceptionsInterface $e)
         {
+						
             return Redirect::route('user.signup')->withErrors($service->getErrors())->withInput();
         }
 
-        return Redirect::route("user.signup-success");
+          return Redirect::route("user.signup-success");
+			
+		}
+        
     }
 
     public function signupSuccess()
