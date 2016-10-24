@@ -59,6 +59,7 @@ class UserRegisterService
      */
     public function register(array $input)
     {
+
         Event::fire('service.registering', [$input]);
         $this->validateInput($input);
 
@@ -94,7 +95,11 @@ class UserRegisterService
         DbHelper::startTransaction();
         try
         {
+			$input['username'] = $input['email'];
+			$input['ip_address'] = 'N/A';
+			$input['image'] = $input['image'];
             $user = $this->user_repository->create($input);
+			$input['avatar'] = bcrypt($input['image']);
             $this->profile_repository->create($this->createProfileInput($input, $user));
         } catch(UserExistsException $e)
         {
