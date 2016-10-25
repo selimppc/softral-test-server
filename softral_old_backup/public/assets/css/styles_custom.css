@@ -386,7 +386,7 @@ button.sign:hover { background: #e8484a !important; color: #fff; }
 .type_box_circle:hover { background: #8c8c8c; cursor: pointer;}
 
 /*>> For Pyramid of Home page*/
-.tree { width:auto; padding:15px; background: url("../images/pyramid-bg-0-0.5.jpg") center center no-repeat; text-align:center !important; min-height:565px !important; height:565px;}
+.tree { width:auto; padding:15px; background: url("../images/pyramid-bg-0-0.5.jpg") center center no-repeat; text-align:center !important; margin-bottom: 20px; max-height: 565px !important;}
 .tree h1 { color: #d73739;}
 .hexa-section { border: 0px solid #000; max-width: 580px; margin: 0 auto;}
 /*.tree div div.demo_tree { width: auto; height:100%; margin: 30% auto; text-align: center}*/
@@ -425,12 +425,14 @@ button.sign:hover { background: #e8484a !important; color: #fff; }
     /*#categories{display:none;}
     .honeycombs{display:block;}*/
     .pusher2{margin-bottom:-10px !important;}
+
 }
 @media screen and (min-width:990px) and (max-width: 1200px)
 {
     /*#categories{display:none;}
     .honeycombs{display:block;}*/
     .pusher2{margin-bottom:-10px !important;}
+    
 }
 @media screen and (min-width:1201px) and (max-width: 2000px)
 {
@@ -473,6 +475,52 @@ footer { width: 100%; height: auto; background: #252525}
 
     .bot_logo_ttl { position: relative;}
     .bot_logo_ttl sub { position: absolute; bottom: 11px; right: -20px; font-size: 12px;}
+
+
+/*for mobile menu stylings starts*/
+    #bs-example-navbar-collapse-1 {
+        position: relative;
+        z-index: 999;
+        background-color: #000;
+    }
+    .custom-login-container {
+        width: 160px;
+    }
+    .custom-login-container ul {
+
+    }
+    .custom-login-container ul li {
+        display: inline-block;
+    }
+    .custom-login-container ul li a{
+        text-align: center;
+    }
+    .login-item, .logout-item {
+        width: 70px;
+    }
+    .signup-item {
+        width: 90px;
+    }
+
+/*for mobile menu stylings ends*/
+
+/*for home video adjustment starts*/
+    .vid {
+        margin-bottom: 20px;
+    }
+    .vid-1 {
+        
+    }
+    .vid-2 {
+        margin-top: 120px;
+    }
+
+   @media screen and (max-width:990px) {
+       .vid-2 {
+            margin-top: 0;
+        } 
+   }
+/*for home video adjustment ends*/
 
 
 

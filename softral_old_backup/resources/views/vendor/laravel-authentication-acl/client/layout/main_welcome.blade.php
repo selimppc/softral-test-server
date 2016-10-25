@@ -401,7 +401,7 @@
 
                     <!-- For Videos-->
                     <div class="col-md-5 ">
-                        <div class="col-md-12 vid_fixed_height relative">
+                        <div class="col-md-12 relative">
                         <!--<div class="video borderimg bg_img">
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/4mJO4ec_fFI" frameborder="0" autoplay allowfullscreen ></iframe>
                         </div>
@@ -409,7 +409,7 @@
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/P6IZMBMEfWU" frameborder="0" allowfullscreen></iframe>
                         </div>-->
                         <!--<div style="height: 15px;">&nbsp;</div>-->
-                        <div class="vid absolute left-0 top-0">
+                        <div class="vid vid-1">
                             <div class="videos_box">
                                 <div class="videos">
                                     <video class="video stopvideo box-shadow-1 bg_white padding-5-5" style="max-height:270px;" controls width="100%" poster="http://www.softral.com/images/Screenshot_2.png">
@@ -421,7 +421,7 @@
                             </div>
                         </div>
                         <!--<div class="bg_white" style="height: 1px;">&nbsp;</div>-->
-                        <div class="vid absolute left-0 bottom-0">
+                        <div class="vid vid-2">
                             <div class="videos_box">
                                 <div class="videos">
                                     <video class="video stopvideo box-shadow-1 bg_white padding-5-5" style="max-height:270px;" controls width="100%" poster="http://www.softral.com/images/Screenshot_3.png">
@@ -439,7 +439,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="h_space_20"></div>
+                <!-- <div class="h_space_20"></div> -->
             </section>
 
 	
