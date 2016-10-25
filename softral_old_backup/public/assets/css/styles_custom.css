@@ -386,7 +386,7 @@ button.sign:hover { background: #e8484a !important; color: #fff; }
 .type_box_circle:hover { background: #8c8c8c; cursor: pointer;}
 
 /*>> For Pyramid of Home page*/
-.tree { width:auto; padding:15px; background: url("../images/pyramid-bg-0-0.5.jpg") center center no-repeat; text-align:center !important; margin-bottom: 20px; max-height: 565px !important;}
+.tree { width:auto; padding:15px; background: url("../images/pyramid-bg-0-0.5.jpg") center center no-repeat; text-align:center !important; max-height: 565px !important;}
 .tree h1 { color: #d73739;}
 .hexa-section { border: 0px solid #000; max-width: 580px; margin: 0 auto;}
 /*.tree div div.demo_tree { width: auto; height:100%; margin: 30% auto; text-align: center}*/
@@ -505,22 +505,63 @@ footer { width: 100%; height: auto; background: #252525}
 /*for mobile menu stylings ends*/
 
 /*for home video adjustment starts*/
+    .home-hexa-video-wrapper {
+        display: inline-flex;
+        margin-bottom: 15px;
+    }
+    .hexa-wrapper {
+
+    }
+    .video-wrapper {
+        background-color: #ddd;
+        margin-right: 15px;
+    }
+    .video-scroller {
+        max-height: 550px;
+        overflow-y: scroll;
+    }
     .vid {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
-    .vid-1 {
-        
-    }
-    .vid-2 {
-        margin-top: 120px;
+    .vid:first-child {
+        margin-top: 20px;
     }
 
    @media screen and (max-width:990px) {
-       .vid-2 {
-            margin-top: 0;
-        } 
+       .home-hexa-video-wrapper {
+            display: block;
+        }
+        .video-wrapper {
+            margin-left: 15px;
+        }
+        .hexa-wrapper {
+            margin-bottom: 15px;
+        }
    }
 /*for home video adjustment ends*/
+
+/*for signup form asterix starts*/
+#frelancer_signup .form-group,
+#employer_signup .form-group{
+ position:relative;
+}
+.required{
+ color: #e8484a;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    width: 12px;
+ position:absolute;
+ left:-12px;
+ top:8px;
+}
+
+.required.required_text{
+ top:0px;
+ left:0;
+}
+
+/*for signup form asterix ends*/
 
 
 
