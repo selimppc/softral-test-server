@@ -251,27 +251,35 @@ class UserController extends Controller {
             $path = base_path() . '/public/images/';
             $img_ready_to_upload = false;
             $img_uploaded = false;
+			
+			
+			if(isset($_FILES['image']['name']) && empty($_FILES['image']['name']) && $_POST['custom_profile_1'] == 'Buyer' ){
+				$img_ready_to_upload = false;
+				
+			}else{
+				
+				if(isset($_FILES['image']['name'])) {
+					$img = $_FILES['image']['name'];
+					$tmp = $_FILES['image']['tmp_name'];
 
-            if(isset($_FILES['image'])) {
-                $img = $_FILES['image']['name'];
-                $tmp = $_FILES['image']['tmp_name'];
+					// get uploaded file's extension
+					$ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));
 
-                // get uploaded file's extension
-                $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+					// can upload same image using rand function
+					$final_image = rand(1000,1000000).'-'.$img;
 
-                // can upload same image using rand function
-                $final_image = rand(1000,1000000).'-'.$img;
-
-                // check's valid format
-                if(in_array($ext, $valid_extensions)) {     
-                    $img_ready_to_upload = true;
-                } 
-                else {
-                    $responceData['success'] = false;
-                    $responceData['message'] = 'Invalid image file';
-                    return json_encode($responceData);
-                }
-            }
+					// check's valid format
+					if(in_array($ext, $valid_extensions)) {     
+						$img_ready_to_upload = true;
+					} 
+					else {
+						$responceData['success'] = false;
+						$responceData['message'] = 'Invalid image file';
+						return json_encode($responceData);
+					}
+				}
+			}
+            
 
             /* image upload ends */
             

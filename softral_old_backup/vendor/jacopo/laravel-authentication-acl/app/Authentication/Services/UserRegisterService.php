@@ -97,9 +97,18 @@ class UserRegisterService
         {
 			$input['username'] = $input['email'];
 			$input['ip_address'] = 'N/A';
-			$input['image'] = $input['image'];
+			
+			
             $user = $this->user_repository->create($input);
-			$input['avatar'] = base64_decode($input['image']);
+			
+			if(isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])){
+				$input['image'] = $input['image'];
+				$input['avatar'] = base64_decode($input['image']);
+			
+			}
+
+			
+			
             $this->profile_repository->create($this->createProfileInput($input, $user));
         } catch(UserExistsException $e)
         {
