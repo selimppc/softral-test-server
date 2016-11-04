@@ -515,10 +515,12 @@ footer { width: 100%; height: auto; background: #252525}
     .video-wrapper {
         background-color: #ddd;
         margin-right: 15px;
+        display:flex;
+        align-items:center;
     }
     .video-scroller {
         max-height: 550px;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
     .vid {
         margin-bottom: 15px;
