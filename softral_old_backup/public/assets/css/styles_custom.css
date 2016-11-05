@@ -448,7 +448,7 @@ button.sign:hover { background: #e8484a !important; color: #fff; }
 .slick-slide img { width: 100%;}
 .slick-prev:before, .slick-next:before { color: black;}
 /*Bottom Slider*/
-.bottom_slider { width:100%; margin:0px auto; padding:0 !important; border: 0px solid #000;}
+.bottom_slider { width:100%; margin:0px auto; padding:0 !important; border: 0px solid #000;color:rgba(0,0,0,.8);text-align:center;}
 .bottom_slider .slick-dots { display: none !important;}
 .bottom_slider .slick-prev, .btm_slider .slick-next { display: none !important;}
 /*Ticker Slider*/
