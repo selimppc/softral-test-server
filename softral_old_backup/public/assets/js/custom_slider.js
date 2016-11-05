@@ -39,12 +39,13 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 8000,
             mobileFirst: true,
-            fade: true,
+            fade: false,
             focusOnSelect: true,
             verticalSwiping: true,
-            cssEase: 'linear'
+            cssEase: 'linear',
+			speed:2000
         });
     });
 
