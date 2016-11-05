@@ -539,7 +539,12 @@ footer { width: 100%; height: auto; background: #252525}
         .hexa-wrapper {
             margin-bottom: 15px;
         }
+		
+		#categories{
+			padding-bottom:10px;
+		}
    }
+   
 /*for home video adjustment ends*/
 
 /*for signup form asterix starts*/
