@@ -448,7 +448,31 @@ button.sign:hover { background: #e8484a !important; color: #fff; }
 .slick-slide img { width: 100%;}
 .slick-prev:before, .slick-next:before { color: black;}
 /*Bottom Slider*/
-.bottom_slider { width:100%; margin:0px auto; padding:0 !important; border: 0px solid #000;color:rgba(0,0,0,.8);text-align:center;}
+.bottom_slider { 
+    width: 100%;
+    margin: 0px auto;
+    padding: 15px !important;
+    border: 0px solid #000;
+    color: rgba(255,255,255,1);
+	font-size:25px;
+    text-align: center;
+    background: #EDEDED;
+   
+    -webkit-box-shadow: 10px 10px 50px 3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 10px 10px 50px 3px rgba(0,0,0,0.15);
+    box-shadow: 10px 10px 50px 3px rgba(0,0,0,0.15);
+    margin-bottom:15px !important;
+	margin-top:20px;
+}
+.bottom_slider .slick-track{
+	    background: #607995;
+    padding: 15px;
+}
+
+.bottom_slider .slick-prev,
+.bottom_slider .slick-next{
+	display:none !important;
+}
 .bottom_slider .slick-dots { display: none !important;}
 .bottom_slider .slick-prev, .btm_slider .slick-next { display: none !important;}
 /*Ticker Slider*/

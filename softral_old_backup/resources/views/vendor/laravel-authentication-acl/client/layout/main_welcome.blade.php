@@ -422,11 +422,9 @@
 		<div class="container-fluid">
 			<div class="col-md-12">
 				<div class="no-padding bg_white box-shadow-4">
-					<section class="bottom_slider slider tahoma text-left" style="padding: 20px !important;">
-						<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-						<div>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, remaining essentially unchanged.</div>
-						<div>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently</div>
-						<div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</div>
+					<section class="bottom_slider slider tahoma text-left" >
+						<div>Hola! Would you like to receive automatic updates or?</div>
+						<div>Find the Software Engineer.</div>
 					</section>
 				</div>
 			</div>
