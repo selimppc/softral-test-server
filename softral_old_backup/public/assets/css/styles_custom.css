@@ -594,6 +594,10 @@ footer { width: 100%; height: auto; background: #252525}
 
 /*for signup form asterix ends*/
 
+.slider_item {
+    visibility: hidden;
+}
+
 
 
 

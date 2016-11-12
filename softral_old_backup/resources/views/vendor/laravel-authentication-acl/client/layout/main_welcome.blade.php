@@ -423,8 +423,71 @@
 			<div class="col-md-12">
 				<div class="no-padding bg_white box-shadow-4">
 					<section class="bottom_slider slider tahoma text-left" >
-						<div>Hola! Would you like to receive automatic updates or?</div>
-						<div>Find the Software Engineer.</div>
+						<div class="slider_item">
+                            <div class="wow custom-wow bounce">
+                                Hola! Would you like to receive automatic updates or?
+                            </div>
+                        </div>
+						<div class="slider_item">
+                            <div class="wow custom-wow shake">
+                                Find the Software Engineer.
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow tada">
+                                Here are some...
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow flash">
+                                Here are some...1
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow bounceInRight">
+                                Here are some...2
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow swing">
+                                Here are some...3
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow wobble">
+                                Here are some...4
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow bounceInUp">
+                                Here are some...5
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow bounceIn">
+                                Here are some...6
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow flipInX">
+                                Here are some...7
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow flipInY">
+                                Here are some...8
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow rotateOut">
+                                Here are some...9
+                            </div>
+                        </div>
+                        <div class="slider_item">
+                            <div class="wow custom-wow flipInX">
+                                Here are some...10
+                            </div>
+                        </div>
 					</section>
 				</div>
 			</div>
@@ -448,6 +511,8 @@
 <!--=== Slider Js ===-->
 <script type="text/javascript" src="{{ URL::asset('assets/slick/slick.js') }}" charset="utf-8"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/js/custom_slider.js') }}" charset="utf-8"></script>
+
+<script type="text/javascript" src="{{ URL::asset('assets/wow/wow.min.js') }}" charset="utf-8"></script>
 
 
 

@@ -22,6 +22,7 @@
     <link href="{{ URL::asset('assets/slick/slick-theme.css') }}" rel="stylesheet" type="text/css" >
 
     <!--=== Other CSS ===-->
+    <link media="all" href="{{ URL::asset('assets/wow/animate.css') }}" rel="stylesheet" type="text/css" >
     <link media="all" href="{{ URL::asset('assets/css/haxagon.css') }}" rel="stylesheet" type="text/css" >
     <link media="all" href="{{ URL::asset('assets/css/homeycombs.css') }}" rel="stylesheet" type="text/css" >
     <link media="all" href="{{ URL::asset('assets/css/video-js.css') }}" rel="stylesheet" type="text/css" >
