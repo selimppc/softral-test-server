@@ -46,7 +46,8 @@
             focusOnSelect: true,
             verticalSwiping: true,
             cssEase: 'linear',
-			speed:2000
+			speed:2000,
+            adaptiveHeight: true
         });
 
         jQuery('.bottom_slider').on('afterChange', function(event, slick, currentSlide, nextSlide){

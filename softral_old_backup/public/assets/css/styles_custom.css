@@ -597,7 +597,12 @@ footer { width: 100%; height: auto; background: #252525}
 .slider_item {
     visibility: hidden;
 }
-
+.bottom_slider .slick-list{
+    min-height: 65px!important;
+}
+.bottom_slider .slick-slide .wow {
+    padding-bottom:30px;
+}
 
 
 
